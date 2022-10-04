@@ -1,0 +1,8 @@
+{
+  "name": "adamant-schema",
+  "version": "0.1.0",
+  "description": "ADAMANT OpenAPI Specification",
+  "scripts": {},
+  "author": "bludnic",
+  "license": "ISC"
+}

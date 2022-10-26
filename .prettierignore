@@ -2,3 +2,5 @@
 dist/
 
 tsconfig.json
+
+examples/

@@ -1,0 +1,9 @@
+{
+  "sortParamsByRequiredFlag": true,
+  "ensureUniqueParams": true,
+  "allowUnicodeIdentifiers": false,
+  "modelPropertyNaming": "original",
+  "supportsES6": false,
+  "npmName": "axios-example",
+  "npmVersion": "0.1.0"
+}

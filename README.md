@@ -19,3 +19,15 @@ $ npm run start
 
 - Swagger UI: http://localhost:3000
 - Schema JSON: http://localhost:3000/schema.json
+
+# Examples
+
+## Axios TypeScript template
+
+```shell
+$ cd examples/axios
+$ npm install
+
+# TS types will be generated in `examples/axios/client` dir
+$ npm run openapi:generate
+```

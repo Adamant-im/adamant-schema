@@ -17,5 +17,5 @@ $ npm run bundle
 $ npm run start
 ```
 
-- Swagger UI: https://localhost:3000
-- Schema JSON: https://localhost:3000/schema.json
+- Swagger UI: http://localhost:3000
+- Schema JSON: http://localhost:3000/schema.json

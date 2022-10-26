@@ -1,0 +1,21 @@
+- name: minAmount
+  in: query
+  description: Filter results by min `amount` property
+  schema:
+    type: integer
+    example: 100000000000001
+  required: false
+- name: fromHeight
+  in: query
+  description: Filter results starting from specific `height`
+  schema:
+    type: integer
+    example: 7585271
+  required: false
+- name: limit
+  in: query
+  description: Limit number of transactions in the result
+  schema:
+    type: integer
+    example: 10
+  required: false

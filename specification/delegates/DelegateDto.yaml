@@ -1,0 +1,58 @@
+required:
+  - username
+  - address
+  - publicKey
+  - vote
+  - votesWeight
+  - producedblocks
+  - missedblocks
+  - rate
+  - rank
+  - approval
+  - productivity
+properties:
+  username:
+    type: string
+    description: Unique delegate's nickname
+  address:
+    type: string
+    description: Delegate address
+  publicKey:
+    type: string
+    description: Delegate Public Key
+  vote:
+    type: string
+    description: Vote weight (obsolete, not used)
+  votesWeight:
+    type: string
+    description: Vote weight (Fair Delegate System)
+  producedlocks:
+    type: integer
+    description: Count of produced blocks
+  missedblocks:
+    type: integer
+    description: Count of missed blocks
+  rate:
+    type: integer
+    description: Current position in the Delegates List
+  rank:
+    type: integer
+    description: Current position in the Delegates List
+  approval:
+    type: number
+    description: Share of votes of all votes in the system
+  productivity:
+    type: number
+    description: Productivity / Uptime of a delegate. If `0`, delegate is not active now
+example:
+  username: galaxy
+  address: U17457189553820283321
+  publicKey: 7e26562594685ba12c0bb99ae80692947828afb71962d54634795d78b3ea7023
+  vote: "248994436803629"
+  votesWeight: "83910064952101"
+  producedblocks: 269879
+  missedblocks: 567
+  rate: 10
+  rank: 10
+  approval: 0.76
+  productivity: 99.79

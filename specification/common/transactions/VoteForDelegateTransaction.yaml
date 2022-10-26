@@ -1,0 +1,33 @@
+allOf:
+  - $ref: "./BaseTransaction.yaml"
+  - type: object
+    required:
+      - votes
+      - asset
+      - type
+    properties:
+      votes:
+        type: object
+        properties:
+          added:
+            type: array
+            items:
+              type: string
+              description: Delegate public key
+              example: c0c580c3fb89409f32181fef58935f286f0c1bbf61bd727084ed915b3a4bc95b
+            description: List of Upvoted delegates
+          deleted:
+            type: array
+            items:
+              type: string
+              description: Delegate public key
+              example: c0c580c3fb89409f32181fef58935f286f0c1bbf61bd727084ed915b3a4bc95b
+            description: List of Downvoted delegates
+      type:
+        type: integer
+        minimum: 3
+        maximum: 3
+        example: 3
+        description: Always equal to `3`
+      asset:
+        $ref: "./assets/VoteForDelegateAsset.yaml"

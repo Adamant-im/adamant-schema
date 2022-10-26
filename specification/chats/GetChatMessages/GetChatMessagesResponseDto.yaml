@@ -1,0 +1,21 @@
+required:
+  - messages
+  - participants
+  - count
+  - success
+  - nodeTimestamp
+properties:
+  messages:
+    type: array
+    items:
+      oneOf:
+        - $ref: "../../common/transactions/TokenTransferTransaction.yaml"
+        - $ref: "../../common/transactions/ChatMessageTransaction.yaml"
+  participants:
+    type: array
+    items:
+      $ref: "../ChatParticipant.yaml"
+  success:
+    type: boolean
+  nodeTimestamp:
+    type: number

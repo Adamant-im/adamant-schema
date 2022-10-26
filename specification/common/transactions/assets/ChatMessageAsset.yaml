@@ -1,0 +1,22 @@
+type: object
+required:
+  - chat
+properties:
+  chat:
+    type: object
+    properties:
+      message:
+        type: string
+        description: Encrypted message
+      own_message:
+        type: string
+        description: Nonce
+      type:
+        type: integer
+        description: Type of chat message (1 - Basic Encrypted Message, 2 - Rich Content Message, 3 - Signal Message).
+                     See details https://github.com/Adamant-im/adamant/wiki/Message-Types
+example:
+  chat:
+    message: 748e4e9cffc969dfa4c1d7b9b708cb171c9e
+    own_message: 96904970891b838c9a3ab1b9a6f31ec194ec94ffaa95d0cd
+    type: 1

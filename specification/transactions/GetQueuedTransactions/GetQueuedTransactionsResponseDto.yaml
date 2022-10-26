@@ -1,0 +1,20 @@
+required:
+  - transactions
+  - count
+  - success
+  - nodeTimestamp
+properties:
+  transactions:
+    type: array
+    items:
+      $ref: "../../common/transactions/QueuedTransaction.yaml"
+  count:
+    type: string
+    example: "1"
+    description: Integer in string format
+  success:
+    type: boolean
+    example: true
+  nodeTimestamp:
+    type: number
+    example: 63647706

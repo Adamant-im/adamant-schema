@@ -1,0 +1,16 @@
+type: object
+required:
+  - username
+  - publicKey
+  - address
+properties:
+  address:
+    $ref: "../../properties/AdamantAddress.yaml"
+  username:
+    type: string
+  publicKey:
+    $ref: "../../properties/PublicKey.yaml"
+example:
+  address: "U1234567"
+  username: jowi
+  publicKey: 6b99151b0e79146a40ab7f6f065e9e2f354fe1e64af8bc35bfa7f5fa5f510ee3

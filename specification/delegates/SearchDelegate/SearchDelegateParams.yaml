@@ -1,0 +1,6 @@
+- name: q
+  in: query
+  description: Partial or full username of a delegate
+  schema:
+    type: string
+  required: true

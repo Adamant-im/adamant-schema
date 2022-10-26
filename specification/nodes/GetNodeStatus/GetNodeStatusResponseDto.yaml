@@ -1,0 +1,19 @@
+required:
+  - success
+  - nodeTimestamp
+  - network
+  - version
+  - wsClient
+properties:
+  success:
+    type: boolean
+    example: true
+  nodeTimestamp:
+    type: number
+    example: 58052984
+  network:
+    $ref: "../NetworkStatus.yaml"
+  version:
+    $ref: "../NodeVersion.yaml"
+  wsClient:
+    $ref: "../WsClient.yaml"

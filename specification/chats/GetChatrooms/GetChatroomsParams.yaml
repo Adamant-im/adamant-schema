@@ -1,0 +1,7 @@
+- name: address
+  in: path
+  description: ADAMANT address
+  required: true
+  schema:
+    type: string
+    example: U839357947177758191

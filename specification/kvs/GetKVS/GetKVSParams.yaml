@@ -1,0 +1,43 @@
+- name: key
+  in: query
+  required: false
+  schema:
+    type: string
+    example: eth:address
+- name: keyIds
+  in: query
+  required: false
+  schema:
+    type: array
+    items:
+      type: string
+    example:
+      - eth:address
+      - doge:address
+      - dash:address
+      - btc:address
+    description: Array of keys, comma-separated in string format
+- name: senderId
+  in: query
+  required: false
+  schema:
+    type: string
+    example: U14236667426471084862
+- name: senderIds
+  in: query
+  required: false
+  schema:
+    type: array
+    items:
+      type: string
+    example:
+      - U3461022864428928223
+      - U17790659840463725618
+      - U43512412354440829
+    description: Array of ADAMANT addresses, comma-separated in string format
+- name: orderBy
+  in: query
+  required: false
+  schema:
+    type: string
+    example: timestamp:desc

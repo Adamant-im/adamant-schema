@@ -1,0 +1,788 @@
+openapi: 3.0.3
+
+info:
+  title: ADAMANT OpenAPI Specification
+  version: 0.1.0
+
+components:
+  schemas:
+    # Account
+    GetAccountInfoResponseDto:
+      $ref: "accounts/GetAccountInfo/GetAccountInfoResponseDto.yaml"
+    GetAccountBalanceResponseDto:
+      $ref: "accounts/GetAccountBalance/GetAccountBalanceResponseDto.yaml"
+    GetAccountPublicKeyResponseDto:
+      $ref: "accounts/GetAccountPublicKey/GetAccountPublicKeyResponseDto.yaml"
+    CreateNewAccountRequestBody:
+      $ref: "accounts/CreateNewAccount/CreateNewAccountRequestBody.yaml"
+    CreateNewAccountResponseDto:
+      $ref: "accounts/CreateNewAccount/CreateNewAccountResponseDto.yaml"
+
+    # Blocks
+    GetBlockInfoResponseDto:
+      $ref: "blocks/GetBlockInfo/GetBlockInfoResponseDto.yaml"
+    GetBlocksResponseDto:
+      $ref: "blocks/GetBlocks/GetBlocksResponseDto.yaml"
+
+    # Chats and Chatrooms
+    GetChatroomsResponseDto:
+      $ref: "chats/GetChatRooms/GetChatroomsResponseDto.yaml"
+    GetChatMessagesResponseDto:
+      $ref: "chats/GetChatMessages/GetChatMessagesResponseDto.yaml"
+    GetChatTransactionsResponseDto:
+      $ref: "chats/GetChatTransactions/GetChatTransactionsResponseDto.yaml"
+    CreateNewChatMessageRequestBody:
+      $ref: "chats/CreateNewChatMessage/CreateNewChatMessageRequestBody.yaml"
+    CreateNewChatMessageResponseDto:
+      $ref: "chats/CreateNewChatMessage/CreateNewChatMessageResponseDto.yaml"
+
+    # Delegates and Voting
+    GetDelegatesResponseDto:
+      $ref: "delegates/GetDelegates/GetDelegatesResponseDto.yaml"
+    GetDelegateResponseDto:
+      $ref: "delegates/GetDelegate/GetDelegateResponseDto.yaml"
+    SearchDelegateResponseDto:
+      $ref: "delegates/SearchDelegate/SearchDelegateResponseDto.yaml"
+    GetDelegatesCountResponseDto:
+      $ref: "delegates/GetDelegatesCount/GetDelegatesCountResponseDto.yaml"
+    GetDelegateStatsResponseDto:
+      $ref: "delegates/GetDelegateStats/GetDelegateStatsResponseDto.yaml"
+    GetNextForgersResponseDto:
+      $ref: "delegates/GetNextForgers/GetNextForgersResponseDto.yaml"
+    GetVotersResponseDto:
+      $ref: "delegates/GetVoters/GetVotersResponseDto.yaml"
+    GetAccountVotesResponseDto:
+      $ref: "delegates/GetAccountVotes/GetAccountVotesResponseDto.yaml"
+    RegisterVotesRequestBody:
+      $ref: "delegates/RegisterVotes/RegisterVotesRequestBody.yaml"
+    RegisterVotesResponseDto:
+      $ref: "delegates/RegisterVotes/RegisterVotesResponseDto.yaml"
+
+    # Nodes and Blockchain
+    GetPeersResponseDto:
+      $ref: "nodes/GetPeers/GetPeersResponseDto.yaml"
+    GetLoadingStatusResponseDto:
+      $ref: "nodes/GetLoadingStatus/GetLoadingStatusResponseDto.yaml"
+    GetSyncStatusResponseDto:
+      $ref: "nodes/GetSyncStatus/GetSyncStatusResponseDto.yaml"
+    GetPingStatusResponseDto:
+      $ref: "nodes/GetPingStatus/GetPingStatusResponseDto.yaml"
+    GetNodeVersionResponseDto:
+      $ref: "nodes/GetNodeVersion/GetNodeVersionResponseDto.yaml"
+    GetBroadhashResponseDto:
+      $ref: "nodes/GetBroadhash/GetBroadhashResponseDto.yaml"
+    GetEpochResponseDto:
+      $ref: "nodes/GetEpoch/GetEpochResponseDto.yaml"
+    GetHeightResponseDto:
+      $ref: "nodes/GetHeight/GetHeightResponseDto.yaml"
+    GetTokenTransferFeeResponseDto:
+      $ref: "nodes/GetTokenTransferFee/GetTokenTransferFeeResponseDto.yaml"
+    GetTransactionTypesFeesResponseDto:
+      $ref: "nodes/GetTransactionTypesFees/GetTransactionTypesFeesResponseDto.yaml"
+    GetNethashResponseDto:
+      $ref: "nodes/GetNethash/GetNethashResponseDto.yaml"
+    GetMilestoneResponseDto:
+      $ref: "nodes/GetMilestone/GetMilestoneResponseDto.yaml"
+    GetRewardResponseDto:
+      $ref: "nodes/GetReward/GetRewardResponseDto.yaml"
+    GetTokensTotalSupplyResponseDto:
+      $ref: "nodes/GetTokensTotalSupply/GetTokensTotalSupplyResponseDto.yaml"
+    GetNetworkInfoResponseDto:
+      $ref: "nodes/GetNetworkInfo/GetNetworkInfoResponseDto.yaml"
+    GetNodeStatusResponseDto:
+      $ref: "nodes/GetNodeStatus/GetNodeStatusResponseDto.yaml"
+
+    # KVS
+    GetKVSResponseDto:
+      $ref: "kvs/GetKVS/GetKVSResponseDto.yaml"
+    SetKVSRequestBody:
+      $ref: "kvs/SetKVS/SetKVSRequestBody.yaml"
+    SetKVSResponseDto:
+      $ref: "kvs/SetKVS/SetKVSResponseDto.yaml"
+
+    # Transactions
+    GetTransactionsResponseDto:
+      $ref: "transactions/GetTransactions/GetTransactionsResponseDto.yaml"
+    GetTransactionByIdResponseDto:
+      $ref: "transactions/GetTransactionById/GetTransactionByIdResponseDto.yaml"
+    GetTransactionsCountResponseDto:
+      $ref: "transactions/GetTransactionsCount/GetTransactionsCountResponseDto.yaml"
+    GetQueuedTransactionsResponseDto:
+      $ref: "transactions/GetQueuedTransactions/GetQueuedTransactionsResponseDto.yaml"
+    GetQueuedTransactionByIdResponseDto:
+      $ref: "transactions/GetQueuedTransactionById/GetQueuedTransactionByIdResponseDto.yaml"
+    GetUnconfirmedTransactionsResponseDto:
+      $ref: "transactions/GetUnconfirmedTransactions/GetUnconfirmedTransactionsResponseDto.yaml"
+    GetUnconfirmedTransactionByIdResponseDto:
+      $ref: "transactions/GetUnconfirmedTransactionById/GetUnconfirmedTransactionByIdResponseDto.yaml"
+    TransferTokenRequestBody:
+      $ref: "transactions/TransferToken/TransferTokenRequestBody.yaml"
+    TransferTokenResponseDto:
+      $ref: "transactions/TransferToken/TransferTokenResponseDto.yaml"
+    RegisterTransactionRequestBody:
+      $ref: "transactions/RegisterTransaction/RegisterTransactionRequestBody.yaml"
+    RegisterTransactionResponseDto:
+      $ref: "transactions/RegisterTransaction/RegisterTransactionResponseDto.yaml"
+tags:
+  - name: Account
+    description: Endpoints intended to interact with ADAMANT accounts
+    externalDocs:
+      description: Find out more
+      url: https://github.com/Adamant-im/adamant/wiki/API-Specification#Account-1
+  - name: Blocks
+    description: List of endpoints giving information of blocks in ADAMANT blockchain
+    externalDocs:
+      description: Find out more
+      url: https://github.com/Adamant-im/adamant/wiki/API-Specification#Blocks-1
+  - name: Chats
+    description: List of endpoints intended to work with chats and chatrooms in ADAMANT blockchain
+    externalDocs:
+      description: Find out more
+      url: https://github.com/Adamant-im/adamant/wiki/API-Specification#Chats-and-Chatrooms-1
+  - name: Delegates and Voting
+    description: Endpoints useful in working with delegate system of ADAMANT blockchain
+    externalDocs:
+      description: Find out more
+      url: https://github.com/Adamant-im/adamant/wiki/API-Specification#Delegates-and-voting-1
+  - name: Nodes and Blockchain
+    description: List of endpoints useful in work with ADAMANT blockchain in general
+    externalDocs:
+      description: Find out more
+      url: https://github.com/Adamant-im/adamant/wiki/API-Specification#Nodes-and-Blockchain-1
+  - name: KVS
+    description: Endpoints intended to store data in ADAMANT Key-Value Storage (KVS)
+    externalDocs:
+      description: Find out more
+      url: https://github.com/Adamant-im/adamant/wiki/API-Specification#states-key-value-storage-kvs-1
+  - name: Transactions
+    description: Contains endpoints useful to interact with transactions of ADAMANT blockchain
+    externalDocs:
+      description: Find out more
+      url: https://github.com/Adamant-im/adamant/wiki/API-Specification#Transactions-1
+paths:
+  # Accounts
+  "/accounts":
+    get:
+      tags:
+        - Account
+      description: Get account information by ADAMANT address or by Public Key
+      parameters:
+        $ref: "accounts/GetAccountInfo/GetAccountInfoParams.yaml"
+      responses:
+        200:
+          description: Account information
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetAccountInfoResponseDto"
+  "/accounts/getBalance":
+    get:
+      tags:
+        - Account
+      description: Get account balance
+      parameters:
+        $ref: "accounts/GetAccountBalance/GetAccountBalanceParams.yaml"
+      responses:
+        200:
+          description: Account balance
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetAccountBalanceResponseDto"
+  "/accounts/getPublicKey":
+    get:
+      tags:
+        - Account
+      description: Get account Public Key
+      parameters:
+        $ref: "accounts/GetAccountPublicKey/GetAccountPublicKeyParams.yaml"
+      responses:
+        200:
+          description: Account Public Key
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetAccountPublicKeyResponseDto"
+  "/accounts/new":
+    post:
+      tags:
+        - Account
+      description: Create new account
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateNewAccountRequestBody"
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CreateNewAccountResponseDto"
+  # Blocks
+  "/blocks/get":
+    get:
+      tags:
+        - Blocks
+      description: Get block information by ID
+      parameters:
+        $ref: "blocks/GetBlockInfo/GetBlockInfoParams.yaml"
+      responses:
+        200:
+          description: Block information
+          content:
+            applicaton/json:
+              schema:
+                $ref: "#/components/schemas/GetBlockInfoResponseDto"
+  "/blocks":
+    get:
+      tags:
+        - Blocks
+      description: Get list of blocks
+      parameters:
+        $ref: "blocks/GetBlocks/GetBlocksQueryParams.yaml"
+      responses:
+        200:
+          description: Lisk of blocks
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetBlocksResponseDto"
+  # Chats and Chatrooms
+  "/chatrooms/{address}":
+    get:
+      tags:
+        - Chats
+      description: Get list of Chats
+      parameters:
+        $ref: "chats/GetChatRooms/GetChatroomsParams.yaml"
+      responses:
+        200:
+          description: Chat rooms
+          content:
+            applicaton/json:
+              schema:
+                $ref: "#/components/schemas/GetChatroomsResponseDto"
+  "/chatrooms/{ownAddress}/{partnerAddress}":
+    get:
+      tags:
+        - Chats
+      description: Get messages between two accounts
+      parameters:
+        $ref: "chats/GetChatMessages/GetChatMessagesParams.yaml"
+      responses:
+        200:
+          description: Chat messages
+          content:
+            applicaton/json:
+              schema:
+                $ref: "#/components/schemas/GetChatMessagesResponseDto"
+  "/api/chats/get":
+    get:
+      tags:
+        - Chats
+      description: Returns list of transactions with `type = 8` (deprecated, use `/chatrooms` instead)
+      parameters:
+        $ref: "chats/GetChatTransactions/GetChatTransactionsParams.yaml"
+      responses:
+        200:
+          description: Messages
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetChatTransactionsResponseDto"
+  "/api/chats/process":
+    post:
+      tags:
+        - Chats
+      description: Broadcast transactions of `type 8 — Сhat/Message`
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateNewChatMessageRequestBody"
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CreateNewChatMessageResponseDto"
+  # Delegates
+  "/api/delegates":
+    get:
+      tags:
+        - Delegates and Voting
+      description: Retrieves list of registered ADAMANT delegates
+      parameters:
+        $ref: "delegates/GetDelegates/GetDelegatesParams.yaml"
+      responses:
+        200:
+          description: List of delegates
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetDelegatesResponseDto"
+  "/api/delegates/get":
+    get:
+      tags:
+        - Delegates and Voting
+      description: Get delegate info by `username` or `publicKey`
+      parameters:
+        $ref: "delegates/GetDelegate/GetDelegateParams.yaml"
+      responses:
+        200:
+          description: Delegate info
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetDelegateResponseDto"
+  "/api/delegates/search":
+    get:
+      tags:
+        - Delegates and Voting
+      description: Search delegates by `username`
+      parameters:
+        $ref: "delegates/SearchDelegate/SearchDelegateParams.yaml"
+      responses:
+        200:
+          description: Delegate info
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SearchDelegateResponseDto"
+  "/api/delegates/count":
+    get:
+      tags:
+        - Delegates and Voting
+      description: Get total count of delegates
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetDelegatesCountResponseDto"
+  "/api/delegates/forging/getForgedByAccount":
+    get:
+      tags:
+        - Delegates and Voting
+      description: Get forging activity of a delegate
+      parameters:
+        $ref: "delegates/GetDelegateStats/GetDelegateStatsParams.yaml"
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetDelegateStatsResponseDto"
+  "/api/delegates/getNextForgers":
+    get:
+      tags:
+        - Delegates and Voting
+      description: Returns list of next forgers
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetNextForgersResponseDto"
+  "/api/delegates/voters":
+    get:
+      tags:
+        - Delegates and Voting
+      description: Get list of delegate's voters
+      parameters:
+        $ref: "delegates/GetVoters/GetVotersParams.yaml"
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetVotersResponseDto"
+  "/api/accounts/delegates":
+    get:
+      tags:
+        - Delegates and Voting
+      description: Current votes of specific ADAMANT account
+      parameters:
+        $ref: "delegates/GetAccountVotes/GetAccountVotesParams.yaml"
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetAccountVotesResponseDto"
+    post:
+      tags:
+        - Delegates and Voting
+      description: Vote for delegates
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RegisterVotesRequestBody"
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RegisterVotesResponseDto"
+  # Nodes and Blockchain
+  "/api/peers":
+    get:
+      tags:
+        - Nodes and Blockchain
+      description: Get list of connected peer nodes
+      parameters:
+        $ref: "nodes/GetPeers/GetPeersParams.yaml"
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetPeersResponseDto"
+  "/api/loader/status":
+    get:
+      tags:
+        - Nodes and Blockchain
+      description: Returns information of node's loading process
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetLoadingStatusResponseDto"
+  "/api/loader/status/sync":
+    get:
+      tags:
+        - Nodes and Blockchain
+      description: Returns information of the node sync process with other peers
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetSyncStatusResponseDto"
+  "/api/loader/status/ping":
+    get:
+      tags:
+        - Nodes and Blockchain
+      description: Get ping status
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetPingStatusResponseDto"
+  "/api/peers/version":
+    get:
+      tags:
+        - Nodes and Blockchain
+      description: Returns node software information
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetNodeVersionResponseDto"
+  "/api/blocks/getBroadhash":
+    get:
+      tags:
+        - Nodes and Blockchain
+      description: Broadhash is established as an aggregated rolling hash of the past five blocks present in the database.
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetBroadhashResponseDto"
+  "/api/blocks/getEpoch":
+    get:
+      tags:
+        - Nodes and Blockchain
+      description: Returns time when blockchain epoch starts. Value `2017-09-02T17:00:00.000Z` is for mainnet.
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetEpochResponseDto"
+  "/api/blocks/getHeight":
+    get:
+      tags:
+        - Nodes and Blockchain
+      description: Returns current node's blockchain height
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetHeightResponseDto"
+  "/api/blocks/getFee":
+    get:
+      tags:
+        - Nodes and Blockchain
+      description: Returns current fee value for `type 0` (token transfer) transactions. Integer amount of 1/10^8 ADM tokens (1 ADM = 100000000).
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetTokenTransferFeeResponseDto"
+  "/api/blocks/getFees":
+    get:
+      tags:
+        - Nodes and Blockchain
+      description: Returns current fee values for different transaction types
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetTransactionTypesFeesResponseDto"
+  "/api/blocks/getNethash":
+    get:
+      tags:
+        - Nodes and Blockchain
+      description: The nethash describes e.g. the Mainnet or the Testnet, that the node is connecting to.
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetNethashResponseDto"
+  "/api/blocks/getMilestone":
+    get:
+      tags:
+        - Nodes and Blockchain
+      description: Return current slot height, which determines reward a delegate will get for forging a block.
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetMilestoneResponseDto"
+  "/api/blocks/getReward":
+    get:
+      tags:
+        - Nodes and Blockchain
+      description: Returns reward — the reward a delegate will get for forging a block. Integer amount of 1/10^8 ADM tokens (1 ADM = 100000000). Depends on the slot height.
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetRewardResponseDto"
+  "/api/blocks/getSupply":
+    get:
+      tags:
+        - Nodes and Blockchain
+      description: Returns total current supply of ADM tokens in network. Integer amount of 1/10^8 ADM tokens (1 ADM = 100000000). Total supply increases with every new forged block.
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetTokensTotalSupplyResponseDto"
+  "/api/blocks/getStatus":
+    get:
+      tags:
+        - Nodes and Blockchain
+      description: Returns blockchain network information in a single request
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetNetworkInfoResponseDto"
+  "/api/node/status":
+    get:
+      tags:
+        - Nodes and Blockchain
+      description: Returns both ADAMANT blockchain network information and Node information in a single request.
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetNodeStatusResponseDto"
+  "/api/states/get":
+    get:
+      tags:
+        - KVS
+      description: Fetch data from KVS. As a result you'll get a list of transactions of `type = 9` with KVS data, stored in `asset.state` field.
+      parameters:
+        $ref: "kvs/GetKVS/GetKVSParams.yaml"
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetKVSResponseDto"
+    post:
+      tags:
+        - KVS
+      description: Creates a KVS transaction (`type 9`)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SetKVSRequestBody"
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SetKVSResponseDto"
+  # Transactions
+  "/api/transactions":
+    get:
+      tags:
+        - Transactions
+      description: Returns list of transactions
+      parameters:
+        $ref: "transactions/GetTransactions/GetTransactionsParams.yaml"
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetTransactionsResponseDto"
+    post:
+      tags:
+        - Transactions
+      description: Broadcast [any type](https://github.com/Adamant-im/adamant/wiki/Transaction-Types) of transaction
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RegisterTransactionRequestBody"
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RegisterTransactionResponseDto"
+  "/api/transactions/get":
+    get:
+      tags:
+        - Transactions
+      description: Get transaction by ID
+      parameters:
+        $ref: "transactions/GetTransactionById/GetTransactionByIdParams.yaml"
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetTransactionByIdResponseDto"
+  "/api/transactions/count":
+    get:
+      tags:
+        - Transactions
+      description: Get `confirmed`, `uncofirmed` and `queued` transactions count
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetTransactionsCountResponseDto"
+  "/api/transactions/queued":
+    get:
+      tags:
+        - Transactions
+      description: Get queued transactions count
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetQueuedTransactionsResponseDto"
+  "/api/transactions/queued/get":
+    get:
+      tags:
+        - Transactions
+      description: Get queued transaction by ID
+      parameters:
+        $ref: "transactions/GetQueuedTransactionById/GetQueuedTransactionByIdParams.yaml"
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetQueuedTransactionsResponseDto"
+  "/api/transactions/unconfirmed":
+    get:
+      tags:
+        - Transactions
+      description: Get unconfirmed transactions
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetUnconfirmedTransactionsResponseDto"
+  "/api/transactions/unconfirmed/get":
+    get:
+      tags:
+        - Transactions
+      description: Get unconfirmed transaction by ID
+      parameters:
+        $ref: "transactions/GetUnconfirmedTransactionById/GetUnconfirmedTransactionByIdParams.yaml"
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetUnconfirmedTransactionByIdResponseDto"
+  "/api/transactions/process":
+    post:
+      tags:
+        - Transactions
+      description: Broadcast transactions of `type 0 — Token transfer` or `type 8 — Chat/Message`.
+                   See [Transaction Types](https://github.com/Adamant-im/adamant/wiki/Transaction-Types)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TransferTokenRequestBody"
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TransferTokenResponseDto"

@@ -1,0 +1,15 @@
+allOf:
+  - $ref: "./RegisterTransactionBase.yaml"
+  - type: object
+    required:
+      - type
+      - asset
+    properties:
+      type:
+        type: integer
+        minimum: 8
+        maximum: 8
+        example: 8
+        description: Always equal to `8`
+      asset:
+        $ref: "../assets/ChatMessageAsset.yaml"

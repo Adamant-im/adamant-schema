@@ -1,0 +1,21 @@
+- name: address
+  in: query
+  description: ADAMANT address
+  required: true
+  schema:
+    type: string
+    example: U839357947177758191
+- name: orderBy
+  in: query
+  description: Order by field
+  required: false
+  schema:
+    type: string
+    example: timestamp:desc
+- name: fromHeight
+  in: query
+  description: Filter transactions starting from specified block `height`
+  required: false
+  schema:
+    type: number
+    example: 6184187

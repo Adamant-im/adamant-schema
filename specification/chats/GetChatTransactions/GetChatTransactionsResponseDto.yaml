@@ -1,0 +1,17 @@
+required:
+  - transactions
+  - count
+  - success
+  - nodeTimestamp
+properties:
+  transactions:
+    type: array
+    items:
+      $ref: "../../common/transactions/ChatMessageTransaction.yaml"
+  count:
+    type: string
+    description: Number in string format
+  success:
+    type: boolean
+  nodeTimestamp:
+    type: number

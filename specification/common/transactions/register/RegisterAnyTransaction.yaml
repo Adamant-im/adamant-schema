@@ -1,0 +1,5 @@
+oneOf:
+  - $ref: "./RegisterVoteForDelegateTransaction.yaml"
+  - $ref: "./RegisterTokenTransferTransaction.yaml"
+  - $ref: "./RegisterKVSTransaction.yaml"
+  - $ref: "./RegisterChatMessageTransaction.yaml"

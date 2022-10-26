@@ -1,0 +1,50 @@
+required:
+  - recipientId
+  - amount
+  - type
+  - senderId
+  - senderPublicKey
+  - timestmap
+  - signature
+  - id
+  - fee
+  - relays
+  - receivedAt
+properties:
+  recipientId:
+    type: string
+    example: U14236667426471084862
+  amount:
+    type: integer
+    example: 0
+  type:
+    type: integer
+    minimum: 0
+    maximum: 9
+    example: 3
+    description: See [Transaction Types](https://github.com/Adamant-im/adamant/wiki/Transaction-Types)
+  senderId:
+    type: string
+    example: U14236667426471084862
+  senderPublicKey:
+    type: string
+    example: 8cd9631f9f634a361ea3b85cbd0df882633e39e7d26d7bc615bbcf75e41524ef
+  timestamp:
+    type: integer
+    example: 63394407
+  signature:
+    type: string
+    example: 7f4f5d240fc66da1cbdb3fe291d6fcec006848236355aebe346fcd1e3ba500caeac1ed0af6f3d7f912a889a1bbedc1d7bab17b6ebd36386b81df78189ddf7c07
+  id:
+    type: string
+    example: "13616514419605573351"
+  fee:
+    type: integer
+    example: 5000000000
+  relays:
+    type: integer
+    example: 1
+  receivedAt:
+    type: string
+    description: Date and time in ISO 8601 format
+    example: 2019-09-06T10:33:28.054Z

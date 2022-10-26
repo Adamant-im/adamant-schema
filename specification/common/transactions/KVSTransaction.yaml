@@ -1,0 +1,15 @@
+allOf:
+  - $ref: "./BaseTransaction.yaml"
+  - type: object
+    required:
+      - asset
+      - type
+    properties:
+      type:
+        type: integer
+        minimum: 9
+        maximum: 9
+        example: 9
+        description: Always equal to `9`
+      asset:
+        $ref: "./assets/KVSTransactionAsset.yaml"

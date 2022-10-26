@@ -1,0 +1,16 @@
+allOf:
+  - $ref: "./BaseTransaction.yaml"
+  - type: object
+    required:
+      - asset
+      - type
+    properties:
+      type:
+        type: integer
+        minimum: 0
+        maximum: 0
+        example: 0
+        description: Always equal to `0`
+      asset:
+        $ref: "./assets/TokenTransferAsset.yaml"
+# @todo alternate file name: DirectTokenTransferTransaction

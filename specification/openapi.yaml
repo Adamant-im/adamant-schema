@@ -773,8 +773,9 @@ paths:
     post:
       tags:
         - Transactions
-      description: Broadcast transactions of `type 0 — Token transfer` or `type 8 — Chat/Message`.
-                   See [Transaction Types](https://github.com/Adamant-im/adamant/wiki/Transaction-Types)
+      description:
+        Broadcast transactions of `type 0 — Token transfer` or `type 8 — Chat/Message`.
+        See [Transaction Types](https://github.com/Adamant-im/adamant/wiki/Transaction-Types)
       requestBody:
         content:
           application/json:

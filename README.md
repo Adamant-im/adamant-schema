@@ -31,3 +31,8 @@ $ npm install
 # TS types will be generated in `examples/axios/client` dir
 $ npm run openapi:generate
 ```
+
+# Links
+
+- [OpenAPI](https://swagger.io/specification/)
+- [ADAMANT Node API Spec Wiki](https://github.com/Adamant-im/adamant/wiki/API-Specification)

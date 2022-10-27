@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "ADAMANT OpenAPI Specification",
   "scripts": {
-    "bundle": "redocly bundle specification/openapi.yaml -o dist/schema.json",
+    "bundle": "redocly bundle specification/openapi.yaml -o docs/schema.json",
     "start": "npm run bundle && ts-node app.ts"
   },
   "author": "bludnic",

@@ -15,6 +15,13 @@ jobs:
           npm ci
           npm run bundle
 
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: swagger-schema
+          path: docs/schema.json
+          retention-days: 5
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:

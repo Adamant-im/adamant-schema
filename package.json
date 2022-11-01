@@ -1,6 +1,6 @@
 {
   "name": "adamant-schema",
-  "version": "0.1.0",
+  "version": "0.7.0",
   "description": "ADAMANT OpenAPI Specification",
   "scripts": {
     "bundle": "redocly bundle specification/openapi.yaml -o dist/schema.json",

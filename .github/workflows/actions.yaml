@@ -31,12 +31,12 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
+      - name: Configure GitHub Pages 📄
+        uses: actions/configure-pages@v2
       - name: Install and Build 🛠️
         run: |
           npm ci
           npm run bundle
-      - name: Configure GitHub Pages 📄
-        uses: actions/configure-pages@v2
       - name: Upload artifacts 📁
         uses: actions/upload-pages-artifact@v1
         with:

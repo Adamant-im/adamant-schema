@@ -3,4 +3,4 @@
 
 node_modules
 
-docs/schema.json
+dist/schema.json

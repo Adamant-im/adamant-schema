@@ -5,6 +5,10 @@ info:
   description: Schema JSON is located [here](/schema.json).
   version: 0.7.0
 
+servers:
+  - url: https://unusual.adamant.im/api
+    description: Mainnet Unusual
+
 components:
   schemas:
     # Account

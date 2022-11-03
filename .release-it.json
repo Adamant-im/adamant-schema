@@ -1,0 +1,25 @@
+{
+  "plugins": {
+    "@release-it/bumper": {
+      "out": [
+        {
+          "file": "specification/openapi.yaml",
+          "path": "info.version"
+        }
+      ]
+    }
+  },
+  "hooks": {
+    "after:@release-it/bumper:bump": "echo Version was bumped"
+  },
+  "npm": {
+    "publish": false
+  },
+  "git": {
+    "commitMessage": "chore(release-it): release v${version}"
+  },
+  "github": {
+    "release": true,
+    "web": true
+  }
+}

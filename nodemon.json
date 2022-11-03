@@ -1,0 +1,7 @@
+{
+  "verbose": true,
+  "ignore": ["dist"],
+  "exec": "npm run start",
+  "watch": ["./specification"],
+  "ext": ".json, .yaml"
+}

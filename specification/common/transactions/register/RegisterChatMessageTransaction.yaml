@@ -11,5 +11,7 @@ allOf:
         maximum: 8
         example: 8
         description: Always equal to `8`
+      recipientId:
+        type: string
       asset:
         $ref: "../assets/ChatMessageAsset.yaml"

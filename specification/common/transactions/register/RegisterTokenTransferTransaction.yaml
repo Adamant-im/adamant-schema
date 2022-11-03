@@ -8,6 +8,8 @@ allOf:
       type:
         type: integer
         description: Can be `type 0 — Token transfer` or `type 8 — Chat/Message`.
+      recipientId:
+        type: string
       amount:
         type: integer
         description: Amount of token to transfer

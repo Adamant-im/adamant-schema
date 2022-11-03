@@ -5,6 +5,10 @@ info:
   description: Schema JSON is located [here](/schema.json).
   version: 0.7.0
 
+servers:
+  - url: https://unusual.adamant.im/api
+    description: Mainnet Unusual
+
 components:
   schemas:
     # Account
@@ -279,7 +283,7 @@ paths:
             applicaton/json:
               schema:
                 $ref: "#/components/schemas/GetChatMessagesResponseDto"
-  "/api/chats/get":
+  "/chats/get":
     get:
       tags:
         - Chats
@@ -293,7 +297,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetChatTransactionsResponseDto"
-  "/api/chats/process":
+  "/chats/process":
     post:
       tags:
         - Chats
@@ -311,7 +315,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/CreateNewChatMessageResponseDto"
   # Delegates
-  "/api/delegates":
+  "/delegates":
     get:
       tags:
         - Delegates and Voting
@@ -325,7 +329,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetDelegatesResponseDto"
-  "/api/delegates/get":
+  "/delegates/get":
     get:
       tags:
         - Delegates and Voting
@@ -339,7 +343,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetDelegateResponseDto"
-  "/api/delegates/search":
+  "/delegates/search":
     get:
       tags:
         - Delegates and Voting
@@ -353,7 +357,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/SearchDelegateResponseDto"
-  "/api/delegates/count":
+  "/delegates/count":
     get:
       tags:
         - Delegates and Voting
@@ -365,7 +369,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetDelegatesCountResponseDto"
-  "/api/delegates/forging/getForgedByAccount":
+  "/delegates/forging/getForgedByAccount":
     get:
       tags:
         - Delegates and Voting
@@ -379,7 +383,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetDelegateStatsResponseDto"
-  "/api/delegates/getNextForgers":
+  "/delegates/getNextForgers":
     get:
       tags:
         - Delegates and Voting
@@ -391,7 +395,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetNextForgersResponseDto"
-  "/api/delegates/voters":
+  "/delegates/voters":
     get:
       tags:
         - Delegates and Voting
@@ -405,7 +409,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetVotersResponseDto"
-  "/api/accounts/delegates":
+  "/accounts/delegates":
     get:
       tags:
         - Delegates and Voting
@@ -436,7 +440,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/RegisterVotesResponseDto"
   # Nodes and Blockchain
-  "/api/peers":
+  "/peers":
     get:
       tags:
         - Nodes and Blockchain
@@ -450,7 +454,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetPeersResponseDto"
-  "/api/loader/status":
+  "/loader/status":
     get:
       tags:
         - Nodes and Blockchain
@@ -462,7 +466,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetLoadingStatusResponseDto"
-  "/api/loader/status/sync":
+  "/loader/status/sync":
     get:
       tags:
         - Nodes and Blockchain
@@ -474,7 +478,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetSyncStatusResponseDto"
-  "/api/loader/status/ping":
+  "/loader/status/ping":
     get:
       tags:
         - Nodes and Blockchain
@@ -486,7 +490,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetPingStatusResponseDto"
-  "/api/peers/version":
+  "/peers/version":
     get:
       tags:
         - Nodes and Blockchain
@@ -498,7 +502,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetNodeVersionResponseDto"
-  "/api/blocks/getBroadhash":
+  "/blocks/getBroadhash":
     get:
       tags:
         - Nodes and Blockchain
@@ -510,7 +514,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetBroadhashResponseDto"
-  "/api/blocks/getEpoch":
+  "/blocks/getEpoch":
     get:
       tags:
         - Nodes and Blockchain
@@ -522,7 +526,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetEpochResponseDto"
-  "/api/blocks/getHeight":
+  "/blocks/getHeight":
     get:
       tags:
         - Nodes and Blockchain
@@ -534,7 +538,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetHeightResponseDto"
-  "/api/blocks/getFee":
+  "/blocks/getFee":
     get:
       tags:
         - Nodes and Blockchain
@@ -546,7 +550,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetTokenTransferFeeResponseDto"
-  "/api/blocks/getFees":
+  "/blocks/getFees":
     get:
       tags:
         - Nodes and Blockchain
@@ -558,7 +562,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetTransactionTypesFeesResponseDto"
-  "/api/blocks/getNethash":
+  "/blocks/getNethash":
     get:
       tags:
         - Nodes and Blockchain
@@ -570,7 +574,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetNethashResponseDto"
-  "/api/blocks/getMilestone":
+  "/blocks/getMilestone":
     get:
       tags:
         - Nodes and Blockchain
@@ -582,7 +586,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetMilestoneResponseDto"
-  "/api/blocks/getReward":
+  "/blocks/getReward":
     get:
       tags:
         - Nodes and Blockchain
@@ -594,7 +598,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetRewardResponseDto"
-  "/api/blocks/getSupply":
+  "/blocks/getSupply":
     get:
       tags:
         - Nodes and Blockchain
@@ -606,7 +610,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetTokensTotalSupplyResponseDto"
-  "/api/blocks/getStatus":
+  "/blocks/getStatus":
     get:
       tags:
         - Nodes and Blockchain
@@ -618,7 +622,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetNetworkInfoResponseDto"
-  "/api/node/status":
+  "/node/status":
     get:
       tags:
         - Nodes and Blockchain
@@ -630,7 +634,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetNodeStatusResponseDto"
-  "/api/states/get":
+  "/states/get":
     get:
       tags:
         - KVS
@@ -661,7 +665,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/SetKVSResponseDto"
   # Transactions
-  "/api/transactions":
+  "/transactions":
     get:
       tags:
         - Transactions
@@ -691,7 +695,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/RegisterTransactionResponseDto"
-  "/api/transactions/get":
+  "/transactions/get":
     get:
       tags:
         - Transactions
@@ -705,7 +709,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetTransactionByIdResponseDto"
-  "/api/transactions/count":
+  "/transactions/count":
     get:
       tags:
         - Transactions
@@ -717,7 +721,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetTransactionsCountResponseDto"
-  "/api/transactions/queued":
+  "/transactions/queued":
     get:
       tags:
         - Transactions
@@ -729,7 +733,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetQueuedTransactionsResponseDto"
-  "/api/transactions/queued/get":
+  "/transactions/queued/get":
     get:
       tags:
         - Transactions
@@ -743,7 +747,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetQueuedTransactionsResponseDto"
-  "/api/transactions/unconfirmed":
+  "/transactions/unconfirmed":
     get:
       tags:
         - Transactions
@@ -755,7 +759,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetUnconfirmedTransactionsResponseDto"
-  "/api/transactions/unconfirmed/get":
+  "/transactions/unconfirmed/get":
     get:
       tags:
         - Transactions
@@ -769,7 +773,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetUnconfirmedTransactionByIdResponseDto"
-  "/api/transactions/process":
+  "/transactions/process":
     post:
       tags:
         - Transactions

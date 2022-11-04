@@ -19,3 +19,24 @@ allOf:
         description: There is no recipient for this type of transaction
       asset:
         $ref: "./assets/RegisterDelegateAsset.yaml"
+example:
+  id: 9970337616987571803
+  height: 9130911
+  blockId: 2640582970042287242
+  type: 2
+  block_timestamp: 52956148
+  timestamp: 52956148
+  senderPublicKey: 6b99151b0e79146a40ab7f6f065e9e2f354fe1e64af8bc35bfa7f5fa5f510ee3
+  senderId: U2850997466368415658
+  recipientId: null
+  recipientPublicKey: null
+  amount: 0
+  fee: 300000000000
+  signature: 07180f9934394af1223f607dffb6d4a27229ecadbef5dd1a8bc32f27f8778915ecbe1af052b8bb4e38dc1fb8d62207956e257ad63ec10cd590f4f1ca6f12720a
+  signatures: []
+  confirmations: 2114803
+  asset:
+    delegate:
+      username: mawi
+      publicKey: 6b99151b0e79146a40ab7f6f065e9e2f354fe1e64af8bc35bfa7f5fa5f510ee3
+      address: U2850997466368415658

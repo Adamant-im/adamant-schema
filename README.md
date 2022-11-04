@@ -3,6 +3,8 @@
 ```shell
 $ npm install
 $ npm run start
+# or
+$ npm run start:watch # watches changes in the /specification dir
 ```
 
 ## Commands

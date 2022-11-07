@@ -4,6 +4,7 @@ allOf:
     required:
       - type
       - amount
+      - recipientId
     properties:
       type:
         type: integer

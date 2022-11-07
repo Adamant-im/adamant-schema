@@ -3,7 +3,6 @@ required:
   - amount
   - senderId
   - senderPublicKey
-  - recipientId
   - signature
   - timestamp
 properties:

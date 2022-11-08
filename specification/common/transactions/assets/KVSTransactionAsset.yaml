@@ -16,5 +16,5 @@ properties:
 example:
   state:
     key: eth:address
-    value: 0x2391EEaEc07B927D2BA4Fa5cB3cE4b490Fa6fffC
+    value: "0x2391EEaEc07B927D2BA4Fa5cB3cE4b490Fa6fffC"
     type: 0

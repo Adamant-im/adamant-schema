@@ -1,6 +1,4 @@
-<h1>
-  Schema <img src="https://img.shields.io/github/workflow/status/Adamant-im/adamant-schema/Build%20&%20Deploy%20to%20Github%20Pages"/>
-</h1>
+# Schema ![build status](https://img.shields.io/github/workflow/status/Adamant-im/adamant-schema/Build%20&%20Deploy%20to%20Github%20Pages)
 
 > Swagger schema for ADAMANT Node API
 
@@ -38,7 +36,7 @@ Once the schema is built you can run the server:
 $ npm run start
 ```
 
-You should now have the Swagger UI running at _http://localhost:3000_. 
+You should now have the Swagger UI running at _http://localhost:3000_.
 
 JSON Schema is available under _http://localhost:3000/schema.json_
 

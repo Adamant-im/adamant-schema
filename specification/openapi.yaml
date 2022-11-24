@@ -30,8 +30,8 @@ components:
       $ref: "blocks/GetBlocks/GetBlocksResponseDto.yaml"
 
     # Chats and Chatrooms
-    GetChatroomsResponseDto:
-      $ref: "chats/GetChatRooms/GetChatroomsResponseDto.yaml"
+    GetChatRoomsResponseDto:
+      $ref: "chats/GetChatRooms/GetChatRoomsResponseDto.yaml"
     GetChatMessagesResponseDto:
       $ref: "chats/GetChatMessages/GetChatMessagesResponseDto.yaml"
     GetChatTransactionsResponseDto:
@@ -265,14 +265,14 @@ paths:
         - Chats
       description: Get list of Chats
       parameters:
-        $ref: "chats/GetChatRooms/GetChatroomsParams.yaml"
+        $ref: "chats/GetChatRooms/GetChatRoomsParams.yaml"
       responses:
         200:
           description: Chat rooms
           content:
             applicaton/json:
               schema:
-                $ref: "#/components/schemas/GetChatroomsResponseDto"
+                $ref: "#/components/schemas/GetChatRoomsResponseDto"
   "/chatrooms/{ownAddress}/{partnerAddress}":
     get:
       tags:

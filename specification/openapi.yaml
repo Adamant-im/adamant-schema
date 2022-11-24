@@ -46,6 +46,10 @@ components:
       $ref: "delegates/GetDelegates/GetDelegatesResponseDto.yaml"
     GetDelegateResponseDto:
       $ref: "delegates/GetDelegate/GetDelegateResponseDto.yaml"
+    RegisterDelegateRequestBody:
+      $ref: "delegates/RegisterDelegate/RegisterDelegateRequestBody.yaml"
+    RegisterDelegateResponseDto:
+      $ref: "delegates/RegisterDelegate/RegisterDelegateResponseDto.yaml"
     SearchDelegateResponseDto:
       $ref: "delegates/SearchDelegate/SearchDelegateResponseDto.yaml"
     GetDelegatesCountResponseDto:
@@ -329,6 +333,22 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetDelegatesResponseDto"
+    post:
+      tags:
+        - Delegates and Voting
+      description: Register new delegate
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RegisterDelegateRequestBody"
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RegisterDelegateResponseDto"
   "/delegates/get":
     get:
       tags:

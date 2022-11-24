@@ -18,7 +18,13 @@ allOf:
         type: "null"
         description: There is no recipient for this type of transaction
       asset:
-        $ref: "./assets/RegisterDelegateAsset.yaml"
+        allOf:
+          -  $ref: "./assets/RegisterDelegateAsset.yaml"
+          - type: object
+            properties:
+              address:
+                $ref: "../properties/AdamantAddress.yaml"
+
 example:
   id: 9970337616987571803
   height: 9130911

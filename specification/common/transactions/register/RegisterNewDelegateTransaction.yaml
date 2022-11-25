@@ -7,7 +7,17 @@ allOf:
       - senderId
     properties:
       asset:
-        $ref: "../assets/RegisterDelegateAsset.yaml"
+        type: object
+        delegate:
+          type: object
+          required:
+            - username
+            - publicKey
+          properties:
+            username:
+              type: string
+            publicKey:
+              $ref: "../../properties/PublicKey.yaml"
       type:
         type: integer
         minimum: 2

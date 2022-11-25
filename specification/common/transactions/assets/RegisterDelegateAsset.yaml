@@ -1,11 +1,12 @@
 type: object
 required:
-  - username
-  - publicKey
-  - address
+  - delegate
 properties:
   delegate:
     type: object
+    required:
+      - username
+      - publicKey
     properties:
       username:
         type: string

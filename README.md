@@ -1,7 +1,22 @@
-# Bootstrap
+# Schema ![build status](https://img.shields.io/github/workflow/status/Adamant-im/adamant-schema/Build%20&%20Deploy%20to%20Github%20Pages)
+
+> Swagger schema for ADAMANT Node API
+
+The specification creates a RESTful interface for easily developing and consuming an API by effectively mapping all the resources and operations associated with it.
+
+_https://schema.adamant.im_
+
+## Bootstrap
+
+Install dependencies via `npm`:
+
+```
+$ npm install
+```
+
+then start dev server:
 
 ```shell
-$ npm install
 $ npm run start
 # or
 $ npm run start:watch # watches changes in the /specification dir
@@ -9,32 +24,36 @@ $ npm run start:watch # watches changes in the /specification dir
 
 ## Commands
 
+To build the schema into a single file `dist/schema.json`, run:
+
 ```shell
-# Bundle YAML files into a single file `dist/schema.json`
 $ npm run bundle
 ```
 
+Once the schema is built you can run the server:
+
 ```shell
-# Run Swagger UI
 $ npm run start
 ```
 
-- Swagger UI: http://localhost:3000
-- Schema JSON: http://localhost:3000/schema.json
+You should now have the Swagger UI running at _http://localhost:3000_.
 
-# Examples
+JSON Schema is available under _http://localhost:3000/schema.json_
 
-## Axios TypeScript template
+## Example
+
+You can use this schema to generate API types for TypeScript:
 
 ```shell
 $ cd examples/axios
+
 $ npm install
 
 # TS types will be generated in `examples/axios/client` dir
 $ npm run openapi:generate
 ```
 
-# Links
+## Links
 
 - [OpenAPI](https://swagger.io/specification/)
 - [ADAMANT Node API Spec Wiki](https://github.com/Adamant-im/adamant/wiki/API-Specification)

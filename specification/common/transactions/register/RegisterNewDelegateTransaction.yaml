@@ -6,24 +6,27 @@ allOf:
       - type
       - senderId
     properties:
-      asset:
-        type: object
-        delegate:
-          type: object
-          required:
-            - username
-            - publicKey
-          properties:
-            username:
-              type: string
-            publicKey:
-              $ref: "../../properties/PublicKey.yaml"
       type:
         type: integer
         minimum: 2
         maximum: 2
         example: 2
         description: Should be always equal to `2`
+      asset:
+        type: object
+        required:
+          - delegate
+        properties:
+          delegate:
+            type: object
+            required:
+              - username
+              - publicKey
+            properties:
+              username:
+                type: string
+              publicKey:
+                $ref: "../../properties/PublicKey.yaml"
 example:
   type: 2
   amount: 0

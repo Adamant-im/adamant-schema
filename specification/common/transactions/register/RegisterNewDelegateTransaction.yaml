@@ -3,7 +3,6 @@ allOf:
   - type: object
     required:
       - asset
-      - recipientId
       - type
       - senderId
     properties:

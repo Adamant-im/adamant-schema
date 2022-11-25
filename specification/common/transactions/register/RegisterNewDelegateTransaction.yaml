@@ -8,7 +8,7 @@ allOf:
       - senderId
     properties:
       asset:
-        $ref: "../assets/VoteForDelegateAsset.yaml"
+        $ref: "../assets/RegisterDelegateAsset.yaml"
       type:
         type: integer
         minimum: 2

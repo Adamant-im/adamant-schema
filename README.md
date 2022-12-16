@@ -1,4 +1,4 @@
-# Schema ![build status](https://img.shields.io/github/workflow/status/Adamant-im/adamant-schema/Build%20&%20Deploy%20to%20Github%20Pages)
+# Schema ![build status](https://img.shields.io/github/actions/workflow/status/Adamant-im/adamant-schema/github-pages.yaml?branch=master)
 
 > Swagger schema for ADAMANT Node API
 

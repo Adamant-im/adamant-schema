@@ -1,5 +1,5 @@
 allOf:
-  - $ref: "../../common/transactions/QueuedTransaction.yaml"
+  - $ref: "../../common/transactions/RegisterDelegateTransaction.yaml"
   - type: object
     required:
       - asset

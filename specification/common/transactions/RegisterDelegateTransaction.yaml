@@ -21,23 +21,24 @@ allOf:
         - $ref: "./assets/RegisterDelegateAsset.yaml"
 
 example:
-  id: 9970337616987571803
-  height: 9130911
-  blockId: 2640582970042287242
+  id: 14674137414602658194
+  height: 31536741
+  blockId: 15921349202793791460
   type: 2
-  block_timestamp: 52956148
-  timestamp: 52956148
-  senderPublicKey: 6b99151b0e79146a40ab7f6f065e9e2f354fe1e64af8bc35bfa7f5fa5f510ee3
-  senderId: U2850997466368415658
+  block_timestamp: 166805152
+  timestamp: 166805152
+  senderPublicKey: a339974effc141f302bd3589c603bdc9468dd66bcc424b60025b36999eb69ca3
+  senderId: U3031563782805250428
   recipientId: null
   recipientPublicKey: null
   amount: 0
   fee: 300000000000
-  signature: 07180f9934394af1223f607dffb6d4a27229ecadbef5dd1a8bc32f27f8778915ecbe1af052b8bb4e38dc1fb8d62207956e257ad63ec10cd590f4f1ca6f12720a
+  relays: 1
+  signature: 1833a86e24d57ad6dbd30c47924500a03096fd06076fafe5bca4f23ab4629268f3b1a58a1ce275356bc0b79f64a11b8abe9bec6c3d55202d6393327f9278910b
   signatures: []
-  confirmations: 2114803
+  confirmations: 427
   asset:
     delegate:
-      username: mawi
-      publicKey: 6b99151b0e79146a40ab7f6f065e9e2f354fe1e64af8bc35bfa7f5fa5f510ee3
-      address: U2850997466368415658
+      username: kpeo
+      publicKey: a339974effc141f302bd3589c603bdc9468dd66bcc424b60025b36999eb69ca3
+      address: U3031563782805250428

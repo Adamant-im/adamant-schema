@@ -17,6 +17,6 @@ properties:
         $ref: "../../properties/PublicKey.yaml"
 example:
   delegate:
-    address: "U4697606961271319613"
-    username: jowi
-    publicKey: 6b99151b0e79146a40ab7f6f065e9e2f354fe1e64af8bc35bfa7f5fa5f510ee3
+    address: "U3031563782805250428"
+    username: kpeo
+    publicKey: a339974effc141f302bd3589c603bdc9468dd66bcc424b60025b36999eb69ca3

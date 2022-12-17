@@ -30,11 +30,11 @@ allOf:
 example:
   type: 2
   amount: 0
-  senderId: "U14236667426471084862"
-  senderPublicKey: "8cd9631f9f634a361ea3b85cbd0df882633e39e7d26d7bc615bbcf75e41524ef"
-  signature: "b3982d603be8f0246fa663e9f012bf28b198cd28f82473db1eb4a342d890f7a2a2c1845db8d256bb5bce1e64a9425822a91e10bf960a2e0b55e20b4841e4ae0b"
-  timestamp: 63228852
+  senderId: "U3031563782805250428"
+  senderPublicKey: "a339974effc141f302bd3589c603bdc9468dd66bcc424b60025b36999eb69ca3"
+  signature: "c2e4a3ef7f0d363611a2b22b96feff269f1a0cbb61741a2ce55756bb9324826092fd9bff6348145e3cc384c097f101a493b9136da5236292ecf8b1ed6657dd01"
+  timestamp: 166805250
   asset:
     delegate:
-      username: jowi
-      publicKey: 6b99151b0e79146a40ab7f6f065e9e2f354fe1e64af8bc35bfa7f5fa5f510ee3
+      username: kpeo
+      publicKey: a339974effc141f302bd3589c603bdc9468dd66bcc424b60025b36999eb69ca3

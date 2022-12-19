@@ -1,18 +1,6 @@
-- name: limit
+- name: id
   in: query
-  description: How much blocks to get, integer. Default is `100`.
-  required: false
+  description: Block ID
+  required: true
   schema:
     type: integer
-    format: int32
-    minimum: 1
-    maximum: 100
-    default: 100
-- name: offset
-  in: query
-  description: Height offset value for results. Default is `0`.
-  required: false
-  schema:
-    type: integer
-    format: int32
-    default: 0

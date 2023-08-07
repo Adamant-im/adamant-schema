@@ -12,10 +12,12 @@ allOf:
         example: 2
         description: Always equal to `2`
       recipientId:
-        type: "null"
+        type: string
+        nullable: true
         description: There is no recipient for this type of transaction
       recipientPublicKey:
-        type: "null"
+        type: string
+        nullable: true
         description: There is no recipient for this type of transaction
       asset:
         $ref: "./assets/RegisterDelegateAsset.yaml"

@@ -18,7 +18,7 @@ allOf:
         type: "null"
         description: There is no recipient for this type of transaction
       asset:
-        - $ref: "./assets/RegisterDelegateAsset.yaml"
+        $ref: "./assets/RegisterDelegateAsset.yaml"
 
 example:
   id: 14674137414602658194

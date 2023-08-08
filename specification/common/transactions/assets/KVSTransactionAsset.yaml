@@ -4,6 +4,10 @@ required:
 properties:
   state:
     type: object
+    required:
+      - key
+      - value
+      - type
     properties:
       key:
         type: string

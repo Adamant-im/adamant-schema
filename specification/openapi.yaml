@@ -668,6 +668,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetKVSResponseDto"
+  "/states/store":
     post:
       tags:
         - KVS

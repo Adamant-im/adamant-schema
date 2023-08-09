@@ -15,28 +15,28 @@
 - name: limit
   in: query
   description: Limit number of messages.
-  default: 100
   required: false
   schema:
     type: integer
     format: int32
     maximum: 100
+    default: 100
 - name: offset
   in: query
   description: Skips **n** messages. Used for pagination
-  default: 0
   required: false
   schema:
     type: integer
     format: int32
+    default: 0
 - name: orderBy
   in: query
   description: Order by field
   required: false
-  default: timestamp:desc
   schema:
     type: string
     example: timestamp:desc
+    default: timestamp:desc
 - name: type
   in: query
   description: Filter by `asset.chat.type`. See [Message Types](https://github.com/Adamant-im/adamant/wiki/Message-Types)

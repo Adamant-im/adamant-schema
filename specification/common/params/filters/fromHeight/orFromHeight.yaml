@@ -1,0 +1,7 @@
+name: or:fromHeight
+in: query
+description: Filter starting from specific height (`or` operator)
+schema:
+  type: integer
+  example: 7585271
+required: false

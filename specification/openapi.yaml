@@ -284,7 +284,7 @@ paths:
     get:
       tags:
         - Chats
-      operationId: getChatMessages
+      operationId: getChatroomMessages
       description: Get messages between two accounts
       parameters:
         $ref: "chats/GetChatMessages/GetChatMessagesParams.yaml"
@@ -299,7 +299,7 @@ paths:
     get:
       tags:
         - Chats
-      operationId: getChatTransactions_deprecated
+      operationId: getChatMessages
       description: Returns list of transactions with `type = 8` (deprecated, use `/chatrooms` instead)
       parameters:
         $ref: "chats/GetChatTransactions/GetChatTransactionsParams.yaml"

@@ -174,6 +174,7 @@ paths:
     get:
       tags:
         - Account
+      operationId: getAccountInfo
       description: Get account information by ADAMANT address or by Public Key
       parameters:
         $ref: "accounts/GetAccountInfo/GetAccountInfoParams.yaml"
@@ -188,6 +189,7 @@ paths:
     get:
       tags:
         - Account
+      operationId: getAccountBalance
       description: Get account balance
       parameters:
         $ref: "accounts/GetAccountBalance/GetAccountBalanceParams.yaml"
@@ -202,6 +204,7 @@ paths:
     get:
       tags:
         - Account
+      operationId: getAccountPublicKey
       description: Get account Public Key
       parameters:
         $ref: "accounts/GetAccountPublicKey/GetAccountPublicKeyParams.yaml"
@@ -216,6 +219,7 @@ paths:
     post:
       tags:
         - Account
+      operationId: createNewAccount
       description: Create new account
       requestBody:
         content:
@@ -234,6 +238,7 @@ paths:
     get:
       tags:
         - Blocks
+      operationId: getBlockInfo
       description: Get block information by ID
       parameters:
         $ref: "blocks/GetBlockInfo/GetBlockInfoParams.yaml"
@@ -248,6 +253,7 @@ paths:
     get:
       tags:
         - Blocks
+      operationId: getBlocks
       description: Get list of blocks
       parameters:
         $ref: "blocks/GetBlocks/GetBlocksQueryParams.yaml"
@@ -263,6 +269,7 @@ paths:
     get:
       tags:
         - Chats
+      operationId: getChatRooms
       description: Get list of Chats
       parameters:
         $ref: "chats/GetChatRooms/GetChatRoomsParams.yaml"
@@ -277,6 +284,7 @@ paths:
     get:
       tags:
         - Chats
+      operationId: getChatMessages
       description: Get messages between two accounts
       parameters:
         $ref: "chats/GetChatMessages/GetChatMessagesParams.yaml"
@@ -291,6 +299,7 @@ paths:
     get:
       tags:
         - Chats
+      operationId: getChatTransactions_deprecated
       description: Returns list of transactions with `type = 8` (deprecated, use `/chatrooms` instead)
       parameters:
         $ref: "chats/GetChatTransactions/GetChatTransactionsParams.yaml"
@@ -305,6 +314,7 @@ paths:
     post:
       tags:
         - Chats
+      operationId: sendMessage
       description: Broadcast transactions of `type 8 — Сhat/Message`
       requestBody:
         content:
@@ -323,6 +333,7 @@ paths:
     get:
       tags:
         - Delegates and Voting
+      operationId: getDelegates
       description: Retrieves list of registered ADAMANT delegates
       parameters:
         $ref: "delegates/GetDelegates/GetDelegatesParams.yaml"
@@ -336,6 +347,7 @@ paths:
     post:
       tags:
         - Delegates and Voting
+      operationId: registerNewDelegate
       description: Register new delegate
       requestBody:
         content:
@@ -353,6 +365,7 @@ paths:
     get:
       tags:
         - Delegates and Voting
+      operationId: getDelegateInfo
       description: Get delegate info by `username` or `publicKey`
       parameters:
         $ref: "delegates/GetDelegate/GetDelegateParams.yaml"
@@ -367,6 +380,7 @@ paths:
     get:
       tags:
         - Delegates and Voting
+      operationId: searchDelegate
       description: Search delegates by `username`
       parameters:
         $ref: "delegates/SearchDelegate/SearchDelegateParams.yaml"
@@ -381,6 +395,7 @@ paths:
     get:
       tags:
         - Delegates and Voting
+      operationId: getDelegatesCount
       description: Get total count of delegates
       responses:
         200:
@@ -393,6 +408,7 @@ paths:
     get:
       tags:
         - Delegates and Voting
+      operationId: getDelegateForgingActivity
       description: Get forging activity of a delegate
       parameters:
         $ref: "delegates/GetDelegateStats/GetDelegateStatsParams.yaml"
@@ -407,6 +423,7 @@ paths:
     get:
       tags:
         - Delegates and Voting
+      operationId: getNextForgers
       description: Returns list of next forgers
       responses:
         200:
@@ -419,6 +436,7 @@ paths:
     get:
       tags:
         - Delegates and Voting
+      operationId: getDelegateVoters
       description: Get list of delegate's voters
       parameters:
         $ref: "delegates/GetVoters/GetVotersParams.yaml"
@@ -433,6 +451,7 @@ paths:
     get:
       tags:
         - Delegates and Voting
+      operationId: getDelegateVotes
       description: Current votes of specific ADAMANT account
       parameters:
         $ref: "delegates/GetAccountVotes/GetAccountVotesParams.yaml"
@@ -446,6 +465,7 @@ paths:
     post:
       tags:
         - Delegates and Voting
+      operationId: voteForDelegates
       description: Vote for delegates
       requestBody:
         content:
@@ -464,6 +484,7 @@ paths:
     get:
       tags:
         - Nodes and Blockchain
+      operationId: getPeers
       description: Get list of connected peer nodes
       parameters:
         $ref: "nodes/GetPeers/GetPeersParams.yaml"
@@ -478,6 +499,7 @@ paths:
     get:
       tags:
         - Nodes and Blockchain
+      operationId: getNodeLoadingStatus
       description: Returns information of node's loading process
       responses:
         200:
@@ -490,6 +512,7 @@ paths:
     get:
       tags:
         - Nodes and Blockchain
+      operationId: getNodeSyncStatus
       description: Returns information of the node sync process with other peers
       responses:
         200:
@@ -502,6 +525,7 @@ paths:
     get:
       tags:
         - Nodes and Blockchain
+      operationId: getNodePingStatus
       description: Get ping status
       responses:
         200:
@@ -514,6 +538,7 @@ paths:
     get:
       tags:
         - Nodes and Blockchain
+      operationId: getNodeVersion
       description: Returns node software information
       responses:
         200:
@@ -526,6 +551,7 @@ paths:
     get:
       tags:
         - Nodes and Blockchain
+      operationId: getBroadhash
       description: Broadhash is established as an aggregated rolling hash of the past five blocks present in the database.
       responses:
         200:
@@ -538,6 +564,7 @@ paths:
     get:
       tags:
         - Nodes and Blockchain
+      operationId: getEpoch
       description: Returns time when blockchain epoch starts. Value `2017-09-02T17:00:00.000Z` is for mainnet.
       responses:
         200:
@@ -550,6 +577,7 @@ paths:
     get:
       tags:
         - Nodes and Blockchain
+      operationId: getHeight
       description: Returns current node's blockchain height
       responses:
         200:
@@ -562,6 +590,7 @@ paths:
     get:
       tags:
         - Nodes and Blockchain
+      operationId: getTokenTransferFee
       description: Returns current fee value for `type 0` (token transfer) transactions. Integer amount of 1/10^8 ADM tokens (1 ADM = 100000000).
       responses:
         200:
@@ -574,6 +603,7 @@ paths:
     get:
       tags:
         - Nodes and Blockchain
+      operationId: getFees
       description: Returns current fee values for different transaction types
       responses:
         200:
@@ -586,6 +616,7 @@ paths:
     get:
       tags:
         - Nodes and Blockchain
+      operationId: getNethash
       description: The nethash describes e.g. the Mainnet or the Testnet, that the node is connecting to.
       responses:
         200:
@@ -598,6 +629,7 @@ paths:
     get:
       tags:
         - Nodes and Blockchain
+      operationId: getMilestone
       description: Return current slot height, which determines reward a delegate will get for forging a block.
       responses:
         200:
@@ -610,6 +642,7 @@ paths:
     get:
       tags:
         - Nodes and Blockchain
+      operationId: getReward
       description: Returns reward — the reward a delegate will get for forging a block. Integer amount of 1/10^8 ADM tokens (1 ADM = 100000000). Depends on the slot height.
       responses:
         200:
@@ -622,6 +655,7 @@ paths:
     get:
       tags:
         - Nodes and Blockchain
+      operationId: getTokenTotalSupply
       description: Returns total current supply of ADM tokens in network. Integer amount of 1/10^8 ADM tokens (1 ADM = 100000000). Total supply increases with every new forged block.
       responses:
         200:
@@ -634,6 +668,7 @@ paths:
     get:
       tags:
         - Nodes and Blockchain
+      operationId: getNetworkInfo
       description: Returns blockchain network information in a single request
       responses:
         200:
@@ -646,6 +681,7 @@ paths:
     get:
       tags:
         - Nodes and Blockchain
+      operationId: getNodeStatus
       description: Returns both ADAMANT blockchain network information and Node information in a single request.
       responses:
         200:
@@ -658,6 +694,7 @@ paths:
     get:
       tags:
         - KVS
+      operationId: getKVS
       description: Fetch data from KVS. As a result you'll get a list of transactions of `type = 9` with KVS data, stored in `asset.state` field.
       parameters:
         $ref: "kvs/GetKVS/GetKVSParams.yaml"
@@ -672,6 +709,7 @@ paths:
     post:
       tags:
         - KVS
+      operationId: setKVS
       description: Creates a KVS transaction (`type 9`)
       requestBody:
         content:
@@ -690,6 +728,7 @@ paths:
     get:
       tags:
         - Transactions
+      operationId: getTransactions
       description: |
         Returns list of transactions
 
@@ -709,6 +748,7 @@ paths:
     post:
       tags:
         - Transactions
+      operationId: sendTransaction
       description: Broadcast [any type](https://github.com/Adamant-im/adamant/wiki/Transaction-Types) of transaction
       requestBody:
         content:
@@ -726,6 +766,7 @@ paths:
     get:
       tags:
         - Transactions
+      operationId: getTransaction
       description: Get transaction by ID
       parameters:
         $ref: "transactions/GetTransactionById/GetTransactionByIdParams.yaml"
@@ -740,6 +781,7 @@ paths:
     get:
       tags:
         - Transactions
+      operationId: getTransactionsCount
       description: Get `confirmed`, `uncofirmed` and `queued` transactions count
       responses:
         200:
@@ -752,7 +794,8 @@ paths:
     get:
       tags:
         - Transactions
-      description: Get queued transactions count
+      operationId: getQueuedTransactions
+      description: Get queued transactions
       responses:
         200:
           description: Successful response
@@ -764,6 +807,7 @@ paths:
     get:
       tags:
         - Transactions
+      operationId: getQueuedTransaction
       description: Get queued transaction by ID
       parameters:
         $ref: "transactions/GetQueuedTransactionById/GetQueuedTransactionByIdParams.yaml"
@@ -778,6 +822,7 @@ paths:
     get:
       tags:
         - Transactions
+      operationId: getUnconfirmedTransactions
       description: Get unconfirmed transactions
       responses:
         200:
@@ -790,6 +835,7 @@ paths:
     get:
       tags:
         - Transactions
+      operationId: getUncorfirmedTransaction
       description: Get unconfirmed transaction by ID
       parameters:
         $ref: "transactions/GetUnconfirmedTransactionById/GetUnconfirmedTransactionByIdParams.yaml"
@@ -804,6 +850,7 @@ paths:
     post:
       tags:
         - Transactions
+      operationId: sendTokens
       description:
         Broadcast transactions of `type 0 — Token transfer` or `type 8 — Chat/Message`.
         See [Transaction Types](https://github.com/Adamant-im/adamant/wiki/Transaction-Types)

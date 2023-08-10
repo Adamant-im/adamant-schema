@@ -22,7 +22,7 @@
 - $ref: '../../common/params/filters/senderId/andSenderId.yaml'
 - $ref: '../../common/params/filters/senderId/orSenderId.yaml'
 
-# senderId
+# recipientId
 - $ref: '../../common/params/filters/recipientId/recipientId.yaml'
 - $ref: '../../common/params/filters/recipientId/andRecipientId.yaml'
 - $ref: '../../common/params/filters/recipientId/orRecipientId.yaml'

@@ -97,19 +97,15 @@
 - $ref: '../../common/params/filters/minConfirmations/andMinConfirmations.yaml'
 - $ref: '../../common/params/filters/minConfirmations/orMinConfirmations.yaml'
 
-###############################
-## Endpoint specific filters ##
-###############################
-
 # type
-- $ref: './params/filters/type/type.yaml'
-- $ref: './params/filters/type/andType.yaml'
-- $ref: './params/filters/type/orType.yaml'
+- $ref: '../../common/params/filters/txType/type.yaml'
+- $ref: '../../common/params/filters/txType/andType.yaml'
+- $ref: '../../common/params/filters/txType/orType.yaml'
 
 # types
-- $ref: './params/filters/types/types.yaml'
-- $ref: './params/filters/types/andTypes.yaml'
-- $ref: './params/filters/types/orTypes.yaml'
+- $ref: '../../common/params/filters/txTypes/types.yaml'
+- $ref: '../../common/params/filters/txTypes/andTypes.yaml'
+- $ref: '../../common/params/filters/txTypes/orTypes.yaml'
 
 ###############################
 ######## Common params ########

@@ -1,0 +1,7 @@
+name: withoutDirectTransfers
+in: query
+description: When set to `true`, excludes type `0` transactions (direct token transfers) from results. Default is `false`.
+schema:
+  type: boolean
+  default: false
+required: false

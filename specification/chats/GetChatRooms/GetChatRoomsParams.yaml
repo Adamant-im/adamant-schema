@@ -1,3 +1,7 @@
+###############################
+######## Path params ##########
+###############################
+
 - name: address
   in: path
   description: ADAMANT address
@@ -5,3 +9,46 @@
   schema:
     type: string
     example: U839357947177758191
+
+###############################
+####### Common filters ########
+###############################
+
+# senderId
+- $ref: '../../common/params/filters/senderId/senderId.yaml'
+- $ref: '../../common/params/filters/senderId/andSenderId.yaml'
+- $ref: '../../common/params/filters/senderId/orSenderId.yaml'
+
+# recipientId
+- $ref: '../../common/params/filters/recipientId/recipientId.yaml'
+- $ref: '../../common/params/filters/recipientId/andRecipientId.yaml'
+- $ref: '../../common/params/filters/recipientId/orRecipientId.yaml'
+
+###############################
+######## Common params ########
+###############################
+
+# offset
+- $ref: '../../common/params/offset.yaml'
+
+# orderBy
+- $ref: '../../common/params/orderBy.yaml'
+
+###############################
+## Endpoint specific filters ##
+###############################
+
+# userId
+- $ref: './params/filters/userId/userId.yaml'
+- $ref: './params/filters/userId/andUserId.yaml'
+- $ref: './params/filters/userId/orUserId.yaml'
+
+# withoutDirectTransfers
+- $ref: './params/filters/withoutDirectTransfers/withoutDirectTransfers.yaml'
+
+###############################
+### Endpoint specific params ##
+###############################
+
+# limit
+- $ref: './params/limit.yaml'

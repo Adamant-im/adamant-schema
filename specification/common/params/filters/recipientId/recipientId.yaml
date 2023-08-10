@@ -3,5 +3,4 @@ in: query
 description: Filter by recipientId
 schema:
   type: string
-  example: U18132012621449491414
 required: false

@@ -3,5 +3,4 @@ in: query
 description: Filter results till block with specific height (`and` operator)
 schema:
   type: integer
-  example: 7585271
 required: false

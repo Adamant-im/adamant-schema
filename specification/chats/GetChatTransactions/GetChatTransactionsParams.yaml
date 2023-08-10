@@ -1,21 +1,50 @@
-- name: address
-  in: query
-  description: ADAMANT address
-  required: true
-  schema:
-    type: string
-    example: U839357947177758191
-- name: orderBy
-  in: query
-  description: Order by field
-  required: false
-  schema:
-    type: string
-    example: timestamp:desc
-- name: fromHeight
-  in: query
-  description: Filter transactions starting from specified block `height`
-  required: false
-  schema:
-    type: number
-    example: 6184187
+###############################
+####### Common filters ########
+###############################
+
+# fromHeight
+- $ref: '../../common/params/filters/fromHeight/fromHeight.yaml'
+- $ref: '../../common/params/filters/fromHeight/andFromHeight.yaml'
+- $ref: '../../common/params/filters/fromHeight/orFromHeight.yaml'
+
+# toHeight
+- $ref: '../../common/params/filters/toHeight/toHeight.yaml'
+- $ref: '../../common/params/filters/toHeight/andToHeight.yaml'
+- $ref: '../../common/params/filters/toHeight/orToHeight.yaml'
+
+# senderId
+- $ref: '../../common/params/filters/senderId/senderId.yaml'
+- $ref: '../../common/params/filters/senderId/andSenderId.yaml'
+- $ref: '../../common/params/filters/senderId/orSenderId.yaml'
+
+# recipientId
+- $ref: '../../common/params/filters/recipientId/recipientId.yaml'
+- $ref: '../../common/params/filters/recipientId/andRecipientId.yaml'
+- $ref: '../../common/params/filters/recipientId/orRecipientId.yaml'
+
+# inId
+- $ref: '../../common/params/filters/inId/inId.yaml'
+- $ref: '../../common/params/filters/inId/andInId.yaml'
+- $ref: '../../common/params/filters/inId/orInId.yaml'
+
+# type
+- $ref: '../../common/params/filters/messageType/type.yaml'
+- $ref: '../../common/params/filters/messageType/andType.yaml'
+- $ref: '../../common/params/filters/messageType/orType.yaml'
+
+###############################
+######## Common params ########
+###############################
+
+# offset
+- $ref: '../../common/params/offset.yaml'
+
+# orderBy
+- $ref: '../../common/params/orderBy.yaml'
+
+###############################
+### Endpoint specific params ##
+###############################
+
+# limit
+- $ref: './params/limit.yaml'

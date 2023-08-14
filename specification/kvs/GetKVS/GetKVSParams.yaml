@@ -1,43 +1,47 @@
-- name: key
-  in: query
-  required: false
-  schema:
-    type: string
-    example: eth:address
-- name: keyIds
-  in: query
-  required: false
-  schema:
-    type: array
-    items:
-      type: string
-    example:
-      - eth:address
-      - doge:address
-      - dash:address
-      - btc:address
-    description: Array of keys, comma-separated in string format
-- name: senderId
-  in: query
-  required: false
-  schema:
-    type: string
-    example: U14236667426471084862
-- name: senderIds
-  in: query
-  required: false
-  schema:
-    type: array
-    items:
-      type: string
-    example:
-      - U3461022864428928223
-      - U17790659840463725618
-      - U43512412354440829
-    description: Array of ADAMANT addresses, comma-separated in string format
-- name: orderBy
-  in: query
-  required: false
-  schema:
-    type: string
-    example: timestamp:desc
+###############################
+####### Common filters ########
+###############################
+
+# fromHeight
+- $ref: '../../common/params/filters/fromHeight/fromHeight.yaml'
+- $ref: '../../common/params/filters/fromHeight/andFromHeight.yaml'
+- $ref: '../../common/params/filters/fromHeight/orFromHeight.yaml'
+
+# toHeight
+- $ref: '../../common/params/filters/toHeight/toHeight.yaml'
+- $ref: '../../common/params/filters/toHeight/andToHeight.yaml'
+- $ref: '../../common/params/filters/toHeight/orToHeight.yaml'
+
+# senderId
+- $ref: '../../common/params/filters/senderId/senderId.yaml'
+- $ref: '../../common/params/filters/senderId/andSenderId.yaml'
+- $ref: '../../common/params/filters/senderId/orSenderId.yaml'
+
+# senderIds
+- $ref: '../../common/params/filters/senderIds/senderIds.yaml'
+- $ref: '../../common/params/filters/senderIds/andSenderIds.yaml'
+- $ref: '../../common/params/filters/senderIds/orSenderIds.yaml'
+
+###############################
+######## Common params ########
+###############################
+
+# offset
+- $ref: '../../common/params/offset.yaml'
+
+# orderBy
+- $ref: '../../common/params/orderBy.yaml'
+
+###############################
+## Endpoint specific filters ##
+###############################
+
+- $ref: './params/filters/key.yaml'
+- $ref: './params/filters/keyIds.yaml'
+- $ref: './params/filters/type.yaml'
+
+###############################
+### Endpoint specific params ##
+###############################
+
+- $ref: './params/limit.yaml'

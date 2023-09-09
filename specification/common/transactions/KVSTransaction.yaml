@@ -12,10 +12,12 @@ allOf:
         example: 9
         description: Always equal to `9`
       recipientId:
-        type: "null"
+        type: string
+        nullable: true
         description: There is no recipient for this type of transaction
       recipientPublicKey:
-        type: "null"
+        type: string
+        nullable: true
         description: There is no recipient for this type of transaction
       asset:
         $ref: "./assets/KVSTransactionAsset.yaml"

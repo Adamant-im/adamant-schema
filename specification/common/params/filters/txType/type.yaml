@@ -1,0 +1,9 @@
+name: type
+in: query
+description: |
+  Get transactions of specified type. See [Transaction Types](https://github.com/Adamant-im/adamant/wiki/Transaction-Types).
+  If `type` is not set, all types of transactions will be returned.
+schema:
+  type: integer
+  example: 8
+required: false

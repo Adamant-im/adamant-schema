@@ -1,7 +1,6 @@
 type: object
 required:
-  - added
-  - deleted
+  - votes
 properties:
   votes:
     type: array

@@ -4,6 +4,10 @@ required:
 properties:
   chat:
     type: object
+    required:
+      - message
+      - own_message
+      - type
     properties:
       message:
         type: string

@@ -1,0 +1,8 @@
+name: or:userId
+in: query
+description: |
+  Filter by senderId/recipientId (`or` operator).
+  The query will look like `tx.senderId = {userId} OR tx.recipientId = {userId}`.
+schema:
+  type: string
+required: false

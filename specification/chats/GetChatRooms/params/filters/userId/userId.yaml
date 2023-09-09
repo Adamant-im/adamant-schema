@@ -1,0 +1,9 @@
+name: userId
+in: query
+description: |
+  Filter by senderId/recipientId.
+  The query will look like `tx.senderId = {userId} OR tx.recipientId = {userId}`.
+schema:
+  type: string
+  example: U14236667426471084862
+required: false

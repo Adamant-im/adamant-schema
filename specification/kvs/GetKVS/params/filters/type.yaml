@@ -11,5 +11,5 @@ schema:
   type: integer
   example: 1
   default: 0
-  enum: [1, 2]
+  enum: [0, 1]
 required: false

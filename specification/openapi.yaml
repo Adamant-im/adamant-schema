@@ -735,7 +735,7 @@ paths:
         You can filter by single parameter, or by multiple parameters using logical operator `and` or `or`.
         For more details check [Transactions Query Language](https://github.com/Adamant-im/adamant/wiki/Transactions-Query-Language)
 
-        The params `blockId` act by default as `or` operator.
+        Params act by default as `or` operator.
       parameters:
         $ref: "transactions/GetTransactions/GetTransactionsParams.yaml"
       responses:

@@ -11,8 +11,7 @@ allOf:
         $ref: "../../common/transactions/assets/VoteForDelegateAsset.yaml"
       type: # overrides QueuedTransaction.yaml
         type: integer
-        minimum: 3
-        maximum: 3
+        enum: [3]
         example: 3
         description: Always equal to `3`
       success:

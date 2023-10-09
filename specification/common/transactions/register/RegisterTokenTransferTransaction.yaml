@@ -8,6 +8,7 @@ allOf:
     properties:
       type:
         type: integer
+        enum: [0, 8]
         description: Can be `type 0 — Token transfer` or `type 8 — Chat/Message`.
       recipientId:
         type: string

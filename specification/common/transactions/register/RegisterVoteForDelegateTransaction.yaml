@@ -15,8 +15,7 @@ allOf:
         example: U14236667426471084862
       type:
         type: integer
-        minimum: 3
-        maximum: 3
+        enum: [3]
         example: 3
         description: Should be always equal to `3`
       senderId:

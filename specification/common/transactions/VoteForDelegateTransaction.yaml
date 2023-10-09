@@ -25,8 +25,7 @@ allOf:
             description: List of Downvoted delegates
       type:
         type: integer
-        minimum: 3
-        maximum: 3
+        enum: [3]
         example: 3
         description: Always equal to `3`
       asset:
@@ -54,4 +53,3 @@ example:
     added: []
     deleted:
       - "c0c580c3fb89409f32181fef58935f286f0c1bbf61bd727084ed915b3a4bc95b"
-

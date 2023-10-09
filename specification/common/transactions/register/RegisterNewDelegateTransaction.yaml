@@ -8,8 +8,7 @@ allOf:
     properties:
       type:
         type: integer
-        minimum: 2
-        maximum: 2
+        enum: [2]
         example: 2
         description: Should be always equal to `2`
       asset:

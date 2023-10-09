@@ -7,8 +7,7 @@ allOf:
     properties:
       type:
         type: integer
-        minimum: 0
-        maximum: 0
+        enum: [0]
         example: 0
         description: Always equal to `0`
       asset:

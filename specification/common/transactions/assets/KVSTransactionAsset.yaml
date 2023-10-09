@@ -15,8 +15,7 @@ properties:
         type: string
       type:
         type: integer
-        minimum: 0
-        maximum: 0
+        enum: [0]
 example:
   state:
     key: eth:address

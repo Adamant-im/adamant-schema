@@ -8,8 +8,7 @@ allOf:
     properties:
       type:
         type: integer
-        minimum: 8
-        maximum: 8
+        enum: [8]
         example: 8
         description: Always equal to `8`
       recipientId:

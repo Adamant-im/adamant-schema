@@ -17,6 +17,7 @@ properties:
         description: Nonce
       type:
         type: integer
+        enum: [1, 2, 3]
         description:
           Type of chat message (1 - Basic Encrypted Message, 2 - Rich Content Message, 3 - Signal Message).
           See details https://github.com/Adamant-im/adamant/wiki/Message-Types

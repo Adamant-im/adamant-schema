@@ -366,7 +366,7 @@ paths:
       tags:
         - Delegates and Voting
       operationId: getDelegateInfo
-      description: Get delegate info by `username` or `publicKey`
+      description: Get delegate info by `username`, `publicKey`, or `address`
       parameters:
         $ref: "delegates/GetDelegate/GetDelegateParams.yaml"
       responses:

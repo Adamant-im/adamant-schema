@@ -48,3 +48,10 @@
 
 # limit
 - $ref: './params/limit.yaml'
+
+###############################
+## Endpoint specific filters ##
+###############################
+
+# withoutDirectTransfers
+- $ref: './params/filters/withoutDirectTransfers/withoutDirectTransfers.yaml'

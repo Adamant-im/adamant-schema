@@ -8,6 +8,18 @@ info:
 servers:
   - url: https://unusual.adamant.im/api
     description: Mainnet Unusual
+  - url: https://lake.adamant.im/api
+    description: Mainnet Lake
+  - url: https://debate.adamant.im/api
+    description: Mainnet Debate
+  - url: https://bid.adamant.im/api
+    description: Mainnet Bid
+  - url: https://sunshine.adamant.im/api
+    description: Mainnet Sunshine
+  - url: https://endless.adamant.im/api
+    description: Mainnet Endless
+  - url: https://ahead.adamant.im/api
+    description: Mainnet Dev
 
 components:
   schemas:

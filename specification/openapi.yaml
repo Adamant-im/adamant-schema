@@ -18,6 +18,8 @@ servers:
     description: Mainnet Sunshine
   - url: https://endless.adamant.im/api
     description: Mainnet Endless
+  - url: https://ahead.adamant.im/api
+    description: Mainnet Dev
 
 components:
   schemas:

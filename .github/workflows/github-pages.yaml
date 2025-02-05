@@ -40,7 +40,7 @@ jobs:
           npm run bundle
 
       - name: Upload artifacts 📁
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           path: dist
 

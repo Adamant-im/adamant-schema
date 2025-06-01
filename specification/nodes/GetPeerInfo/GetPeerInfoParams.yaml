@@ -13,4 +13,4 @@
   schema:
     type: integer
     format: int32
-    example: 3666
+    example: 36666

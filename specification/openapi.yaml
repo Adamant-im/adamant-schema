@@ -82,6 +82,8 @@ components:
     # Nodes and Blockchain
     GetPeersResponseDto:
       $ref: "nodes/GetPeers/GetPeersResponseDto.yaml"
+    GetPeerInfoResponseDto:
+      $ref: "nodes/GetPeerInfo/GetPeerInfoResponseDto.yaml"
     GetLoadingStatusResponseDto:
       $ref: "nodes/GetLoadingStatus/GetLoadingStatusResponseDto.yaml"
     GetSyncStatusResponseDto:
@@ -507,6 +509,21 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetPeersResponseDto"
+  "/peers/get":
+    get:
+      tags:
+        - Nodes and Blockchain
+      operationId: getPeer
+      description: Finds and returns the known peer of the node.
+      parameters:
+        $ref: "nodes/GetPeerInfo/GetPeerInfoParams.yaml"
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetPeerInfoResponseDto"
   "/loader/status":
     get:
       tags:

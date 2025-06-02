@@ -45,3 +45,6 @@
     type: integer
     example: 1
     enum: [1, 2]
+
+# returnUnconfirmed
+- $ref: '../../common/params/returnUnconfirmed.yaml'

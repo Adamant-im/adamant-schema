@@ -7,9 +7,9 @@ properties:
   transactions:
     type: array
     items:
-      $ref: "../../common/transactions/KVSTransaction.yaml"
+      $ref: '../../common/transactions/KVSTransaction.yaml'
   count:
-    type: number
+    type: integer
     example: 1
   success:
     type: boolean

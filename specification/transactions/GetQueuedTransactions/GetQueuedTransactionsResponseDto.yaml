@@ -9,7 +9,7 @@ properties:
     items:
       $ref: "../../common/transactions/QueuedTransaction.yaml"
   count:
-    type: number
+    type: integer
     example: 1
   success:
     type: boolean

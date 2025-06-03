@@ -9,7 +9,7 @@ properties:
     items:
       $ref: "../../common/transactions/AnyTransaction.yaml"
   count:
-    type: string
+    type: integer
     example: 1
   success:
     type: boolean

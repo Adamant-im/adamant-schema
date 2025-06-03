@@ -9,7 +9,7 @@ properties:
     items:
       $ref: "../../common/transactions/ChatMessageTransaction.yaml"
   count:
-    type: number
+    type: integer
   success:
     type: boolean
   nodeTimestamp:

@@ -9,6 +9,8 @@ required:
   - clock
   - updated
   - nonce
+  - isBroadcastingViaSocket
+  - syncProtocol
 properties:
   ip:
     type: string
@@ -40,6 +42,13 @@ properties:
   nonce:
     type: string
     description: Unique Identifier for the peer. Random string.
+  isBroadcastingViaSocket:
+    type: boolean
+    description: Indicates whether the node can send transactions to the peer over WebSocket.
+  syncProtocol:
+    type: string
+    enum: ["http", "ws"]
+    description: "Indicates the protocol used to subscribe to the peer: 'http' if using HTTP only, or 'ws' if using WebSocket, which also allows receiving transactions via both WebSocket and HTTP."
 example:
   ip: 194.32.79.175
   port: 36666
@@ -51,3 +60,5 @@ example:
   clock: null
   updated: 1562424199553
   nonce: jxXV6g0sHJhmDubq
+  isBroadcastingViaSocket: false
+  syncProtocol: ws

@@ -1,12 +1,10 @@
 required:
-  - peers
+  - peer
   - success
   - nodeTimestamp
 properties:
-  peers:
-    type: array
-    items:
-      $ref: "../PeerDto.yaml"
+  peer:
+    $ref: "../PeerDto.yaml"
   success:
     type: boolean
   nodeTimestamp:

@@ -42,6 +42,9 @@
 # orderBy
 - $ref: '../../common/params/orderBy.yaml'
 
+# returnUnconfirmed
+- $ref: '../../common/params/returnUnconfirmed.yaml'
+
 ###############################
 ### Endpoint specific params ##
 ###############################

@@ -1,6 +1,7 @@
 required:
   - success
   - nodeTimestamp
+  - loader
   - network
   - version
   - wsClient
@@ -11,6 +12,34 @@ properties:
   nodeTimestamp:
     type: number
     example: 58052984
+  loader:
+    required:
+      - loaded
+      - now
+      - syncing
+      - consensus
+      - blocks
+      - blocksCount
+    properties:
+      loaded:
+        type: boolean
+      now:
+        type: number
+      syncing:
+        type: boolean
+      consensus:
+        type: number
+      blocks:
+        type: number
+      blocksCount:
+        type: number
+    example:
+      loaded: true
+      now: 4819
+      syncing: true
+      consensus: 0
+      blocks: 15145334
+      blocksCount: 0
   network:
     $ref: "../NetworkStatus.yaml"
   version:

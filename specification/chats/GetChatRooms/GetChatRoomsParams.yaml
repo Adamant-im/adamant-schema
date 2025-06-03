@@ -46,8 +46,11 @@
 - $ref: './params/filters/userId/andUserId.yaml'
 - $ref: './params/filters/userId/orUserId.yaml'
 
-# withoutDirectTransfers
-- $ref: './params/filters/withoutDirectTransfers/withoutDirectTransfers.yaml'
+# # withoutDirectTransfers (deprecated)
+# - $ref: './params/filters/withoutDirectTransfers/withoutDirectTransfers.yaml'
+
+# includeDirectTransfers
+- $ref: './params/filters/includeDirectTransfers/includeDirectTransfers.yaml'
 
 ###############################
 ### Endpoint specific params ##

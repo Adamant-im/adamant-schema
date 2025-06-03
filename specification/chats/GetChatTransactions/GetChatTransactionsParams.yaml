@@ -56,5 +56,8 @@
 ## Endpoint specific filters ##
 ###############################
 
-# withoutDirectTransfers
-- $ref: './params/filters/withoutDirectTransfers/withoutDirectTransfers.yaml'
+# # withoutDirectTransfers (deprecated)
+# - $ref: './params/filters/withoutDirectTransfers/withoutDirectTransfers.yaml'
+
+# includeDirectTransfers
+- $ref: './params/filters/includeDirectTransfers/includeDirectTransfers.yaml'

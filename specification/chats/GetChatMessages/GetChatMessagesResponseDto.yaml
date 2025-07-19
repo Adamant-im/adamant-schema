@@ -9,12 +9,12 @@ properties:
     type: array
     items:
       oneOf:
-        - $ref: "../../common/transactions/TokenTransferTransaction.yaml"
-        - $ref: "../../common/transactions/ChatMessageTransaction.yaml"
+        - $ref: '../../common/transactions/TokenTransferTransaction.yaml'
+        - $ref: '../../common/transactions/ChatMessageTransaction.yaml'
   participants:
     type: array
     items:
-      $ref: "../ChatParticipant.yaml"
+      $ref: '../ChatParticipant.yaml'
   success:
     type: boolean
   nodeTimestamp:

@@ -4,7 +4,7 @@ required:
   - nodeTimestamp
 properties:
   block:
-    $ref: "../BlockInfoDto.yaml"
+    $ref: '../BlockInfoDto.yaml'
   success:
     type: boolean
   nodeTimestamp:

@@ -1,5 +1,5 @@
 allOf:
-  - $ref: "../NetworkStatus.yaml"
+  - $ref: '../NetworkStatus.yaml'
   - type: object
     required:
       - success

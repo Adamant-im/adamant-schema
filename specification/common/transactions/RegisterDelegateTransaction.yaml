@@ -1,5 +1,5 @@
 allOf:
-  - $ref: "./BaseTransaction.yaml"
+  - $ref: './BaseTransaction.yaml'
   - type: object
     required:
       - type
@@ -19,7 +19,7 @@ allOf:
         nullable: true
         description: There is no recipient for this type of transaction
       asset:
-        $ref: "./assets/RegisterDelegateAsset.yaml"
+        $ref: './assets/RegisterDelegateAsset.yaml'
 
 example:
   id: 14674137414602658194

@@ -10,6 +10,6 @@ properties:
   version:
     type: string
 example:
-  build: ""
+  build: ''
   commit: b07aaf9580dffb5cc95cc65f303f6f1e5fca7d9c
   version: 0.5.2

@@ -5,7 +5,7 @@ required:
 properties:
   transactionId:
     type: string
-    example: "6146865104403680934"
+    example: '6146865104403680934'
   success:
     type: boolean
     example: true

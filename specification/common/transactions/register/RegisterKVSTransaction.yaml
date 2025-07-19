@@ -1,5 +1,5 @@
 allOf:
-  - $ref: "./RegisterTransactionBase.yaml"
+  - $ref: './RegisterTransactionBase.yaml'
   - type: object
     required:
       - type
@@ -11,4 +11,4 @@ allOf:
         example: 9
         description: Should be always equal to `9` (Store in KVS transaction type)
       asset:
-        $ref: "../assets/KVSTransactionAsset.yaml"
+        $ref: '../assets/KVSTransactionAsset.yaml'

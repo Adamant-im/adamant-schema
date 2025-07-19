@@ -12,4 +12,4 @@ properties:
 example:
   success: true
   nodeTimestamp: 63205623
-  transactionId: "2515012750420367858"
+  transactionId: '2515012750420367858'

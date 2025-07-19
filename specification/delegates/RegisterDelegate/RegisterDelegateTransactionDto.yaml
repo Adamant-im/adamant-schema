@@ -1,12 +1,12 @@
 allOf:
-  - $ref: "../../common/transactions/QueuedTransaction.yaml"
+  - $ref: '../../common/transactions/QueuedTransaction.yaml'
   - type: object
     required:
       - asset
       - type
     properties:
       asset:
-        $ref: "../../common/transactions/assets/RegisterDelegateAsset.yaml"
+        $ref: '../../common/transactions/assets/RegisterDelegateAsset.yaml'
       type:
         type: integer
         enum: [2]

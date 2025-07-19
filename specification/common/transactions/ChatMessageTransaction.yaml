@@ -1,5 +1,5 @@
 allOf:
-  - $ref: "./BaseTransaction.yaml"
+  - $ref: './BaseTransaction.yaml'
   - type: object
     required:
       - asset
@@ -11,7 +11,7 @@ allOf:
         example: 8
         description: Always equal to `8`
       asset:
-        $ref: "./assets/ChatMessageAsset.yaml"
+        $ref: './assets/ChatMessageAsset.yaml'
 example:
   id: 17242227802580636436
   height: 7583081

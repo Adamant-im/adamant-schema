@@ -10,6 +10,9 @@ required:
   - fee
   - relays
   - receivedAt
+  - blockId
+  - height
+  - confirmations
 properties:
   recipientId:
     type: string
@@ -48,3 +51,16 @@ properties:
     type: string
     description: Date and time in ISO 8601 format
     example: 2019-09-06T10:33:28.054Z
+  blockId:
+    type: string
+    enum:
+      - null
+    const: null
+  height:
+    type: number
+    enum:
+      - null
+    const: null
+  confirmations:
+    type: number
+    const: 0

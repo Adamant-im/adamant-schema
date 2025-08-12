@@ -3,5 +3,5 @@
   description: Transaction ID
   schema:
     type: string
-    example: "12154642911137703318"
+    example: '12154642911137703318'
   required: false

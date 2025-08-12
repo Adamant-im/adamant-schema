@@ -18,7 +18,7 @@ properties:
     type: string
     format: int64
   publicKey:
-    $ref: "../common/properties/PublicKey.yaml"
+    $ref: '../common/properties/PublicKey.yaml'
   unconfirmedSignature:
     type: number
   secondSignature:
@@ -35,4 +35,4 @@ properties:
     type: array
     items:
       type: string
-    "example": []
+    'example': []

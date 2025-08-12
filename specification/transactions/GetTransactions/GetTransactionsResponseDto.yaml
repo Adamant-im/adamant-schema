@@ -7,7 +7,7 @@ properties:
   transactions:
     type: array
     items:
-      $ref: "../../common/transactions/AnyTransaction.yaml"
+      $ref: '../../common/transactions/AnyTransaction.yaml'
   count:
     type: integer
     example: 1

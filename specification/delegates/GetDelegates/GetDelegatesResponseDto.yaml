@@ -7,7 +7,7 @@ properties:
   delegates:
     type: array
     items:
-      $ref: "../DelegateDto.yaml"
+      $ref: '../DelegateDto.yaml'
   totalCount:
     type: integer
     example: 254

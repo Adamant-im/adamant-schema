@@ -37,7 +37,7 @@ properties:
     example: 7f4f5d240fc66da1cbdb3fe291d6fcec006848236355aebe346fcd1e3ba500caeac1ed0af6f3d7f912a889a1bbedc1d7bab17b6ebd36386b81df78189ddf7c07
   id:
     type: string
-    example: "13616514419605573351"
+    example: '13616514419605573351'
   fee:
     type: integer
     example: 5000000000

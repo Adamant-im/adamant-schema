@@ -7,7 +7,7 @@ properties:
   transactions:
     type: array
     items:
-      $ref: "../../common/transactions/UnconfirmedTransaction.yaml"
+      $ref: '../../common/transactions/UnconfirmedTransaction.yaml'
   count:
     type: integer
     example: 1

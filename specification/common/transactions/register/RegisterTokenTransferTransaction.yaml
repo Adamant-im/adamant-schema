@@ -1,5 +1,5 @@
 allOf:
-  - $ref: "./RegisterTransactionBase.yaml"
+  - $ref: './RegisterTransactionBase.yaml'
   - type: object
     required:
       - type

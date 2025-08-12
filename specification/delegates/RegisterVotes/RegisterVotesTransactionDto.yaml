@@ -1,5 +1,5 @@
 allOf:
-  - $ref: "../../common/transactions/QueuedTransaction.yaml"
+  - $ref: '../../common/transactions/QueuedTransaction.yaml'
   - type: object
     required:
       - asset
@@ -8,7 +8,7 @@ allOf:
       - nodeTimestamp
     properties:
       asset:
-        $ref: "../../common/transactions/assets/VoteForDelegateAsset.yaml"
+        $ref: '../../common/transactions/assets/VoteForDelegateAsset.yaml'
       type: # overrides QueuedTransaction.yaml
         type: integer
         enum: [3]

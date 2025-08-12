@@ -6,7 +6,7 @@ properties:
   delegates:
     type: array
     items:
-      $ref: "./SearchDelegateDto.yaml"
+      $ref: './SearchDelegateDto.yaml'
   success:
     type: boolean
     example: true

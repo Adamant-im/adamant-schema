@@ -10,4 +10,4 @@ properties:
     type: number
     example: 58646306
   fees:
-    $ref: "./TransactionTypesFeesDto.yaml"
+    $ref: './TransactionTypesFeesDto.yaml'

@@ -41,8 +41,8 @@ properties:
       blocks: 15145334
       blocksCount: 0
   network:
-    $ref: "../NetworkStatus.yaml"
+    $ref: '../NetworkStatus.yaml'
   version:
-    $ref: "../NodeVersion.yaml"
+    $ref: '../NodeVersion.yaml'
   wsClient:
-    $ref: "../WsClient.yaml"
+    $ref: '../WsClient.yaml'

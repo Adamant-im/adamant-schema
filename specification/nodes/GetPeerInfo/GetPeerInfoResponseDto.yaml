@@ -4,7 +4,7 @@ required:
   - nodeTimestamp
 properties:
   peer:
-    $ref: "../PeerDto.yaml"
+    $ref: '../PeerDto.yaml'
   success:
     type: boolean
   nodeTimestamp:

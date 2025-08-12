@@ -15,7 +15,7 @@ properties:
   nodeTimestamp:
     type: number
 example:
-  balance: "4509718944753"
-  unconfirmedBalance: "4509718944753"
+  balance: '4509718944753'
+  unconfirmedBalance: '4509718944753'
   success: true
   nodeTimestamp: 58043820

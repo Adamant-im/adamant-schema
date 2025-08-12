@@ -3,6 +3,6 @@ required:
   - publicKey
 properties:
   address:
-    $ref: "../common/properties/AdamantAddress.yaml"
+    $ref: '../common/properties/AdamantAddress.yaml'
   publicKey:
-    $ref: "../common/properties/PublicKey.yaml"
+    $ref: '../common/properties/PublicKey.yaml'

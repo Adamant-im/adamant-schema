@@ -1,1 +1,1 @@
-$ref: "../../common/transactions/register/RegisterVoteForDelegateTransaction.yaml"
+$ref: '../../common/transactions/register/RegisterVoteForDelegateTransaction.yaml'

@@ -1,6 +1,8 @@
 required:
   - success
   - nodeTimestamp
+  - nodeTimestampMs
+  - unixTimestampMs
   - loader
   - network
   - version
@@ -12,6 +14,15 @@ properties:
   nodeTimestamp:
     type: number
     example: 58052984
+    description: Current node time measured in seconds since the ADAMANT epoch.
+  nodeTimestampMs:
+    type: number
+    example: 58052984123
+    description: Current node time measured in milliseconds since the ADAMANT epoch. This is node clock metadata and is not consensus data.
+  unixTimestampMs:
+    type: number
+    example: 1562424584123
+    description: Current node time measured in Unix milliseconds. This is node clock metadata and is not consensus data.
   loader:
     required:
       - loaded

@@ -1,6 +1,10 @@
 # Editors
 .idea
+.vscode
 
 node_modules
 
 dist/schema.json
+
+# ai
+.ai-ignored/

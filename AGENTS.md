@@ -4,7 +4,7 @@ This document defines how AI agents must work in this repository.
 
 ## Mission
 
-`adamant-schema` is the **OpenAPI 3.0 specification source** for the ADAMANT Node API, served as a Swagger UI at https://schema.adamant.im.
+`adamant-schema` is the **OpenAPI 3.0 specification source** for the ADAMANT Node API, served as a Swagger UI at <https://schema.adamant.im>.
 
 Agent output must optimize for:
 
@@ -63,7 +63,7 @@ This repository is the **source of truth for the ADAMANT Node API contract**. Ch
 
 When adding, removing, or renaming API fields or endpoints:
 
-1. Confirm the behavior against the live node: https://docs.adamant.im
+1. Confirm the behavior against the live node: <https://docs.adamant.im>
 2. After merging, notify or update consumers — especially `adamant-api-jsclient`
 3. If a field is being deprecated, preserve it in the schema until all consumers have migrated
 
@@ -72,13 +72,13 @@ When adding, removing, or renaming API fields or endpoints:
 There is no test framework. Validation is:
 
 1. `npm run bundle` — must complete without errors
-2. Visual check in Swagger UI — `npm run start`, then open http://localhost:3000
+2. Visual check in Swagger UI — `npm run start`, then open <http://localhost:3000>
 
 Formatting is handled by Prettier. It runs automatically on pre-commit (husky + lint-staged for `*.{json,yaml,js,ts}`). Prettier config: 2-space indent, single quotes, trailing commas (ES5), semicolons.
 
 ## Deployment
 
-Pushing to `master` triggers the GitHub Actions workflow (`.github/workflows/github-pages.yaml`) which bundles and deploys to GitHub Pages → https://schema.adamant.im.
+Pushing to `master` triggers the GitHub Actions workflow (`.github/workflows/github-pages.yaml`) which bundles and deploys to GitHub Pages → <https://schema.adamant.im>.
 
 Work in `dev` and open PRs targeting `dev`. Merges to `master` are release actions.
 
@@ -142,7 +142,7 @@ A change is done when:
 
 - `npm run bundle` completes without errors
 - Swagger UI renders the endpoint or schema correctly
-- API contract is consistent with ADAMANT Node behavior (https://docs.adamant.im)
+- API contract is consistent with ADAMANT Node behavior (<https://docs.adamant.im>)
 - Downstream consumer impact is noted in the PR description
 - All repository artifacts are in English
 

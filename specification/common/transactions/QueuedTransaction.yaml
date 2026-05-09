@@ -35,6 +35,11 @@ properties:
   timestamp:
     type: integer
     example: 63394407
+  timestampMs:
+    type: integer
+    nullable: true
+    example: 63394407123
+    description: Optional transaction time measured in milliseconds since the ADAMANT epoch. Available for transactions that include it; for consensus-sensitive blockchain storage it works after the `spaceship` activation. When present, it belongs to the same second as `timestamp`.
   signature:
     type: string
     example: 7f4f5d240fc66da1cbdb3fe291d6fcec006848236355aebe346fcd1e3ba500caeac1ed0af6f3d7f912a889a1bbedc1d7bab17b6ebd36386b81df78189ddf7c07

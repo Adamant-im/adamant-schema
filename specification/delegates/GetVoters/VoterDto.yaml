@@ -5,8 +5,7 @@ required:
   - balance
 properties:
   username:
-    type: string
-    nullable: true
+    type: [string, 'null']
     description: Voter's delegate username. `null` if address is not a delegate.
   address:
     type: string

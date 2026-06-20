@@ -4,7 +4,7 @@ This document defines how AI agents must work in this repository.
 
 ## Mission
 
-`adamant-schema` is the **OpenAPI 3.0 specification source** for the ADAMANT Node API, served as a Swagger UI at <https://schema.adamant.im>.
+`adamant-schema` is the **OpenAPI 3.2 specification source** for the ADAMANT Node API, served as a Swagger UI at <https://schema.adamant.im>.
 
 Agent output must optimize for:
 
@@ -21,7 +21,7 @@ Agent output must optimize for:
 
 ```
 specification/
-  openapi.yaml          # Root OpenAPI 3.0 spec — registers all schemas and paths
+  openapi.yaml          # Root OpenAPI 3.2 spec — registers all schemas and paths
   accounts/             # Account management endpoints and DTOs
   blocks/               # Block info endpoints and DTOs
   chats/                # Chat messages, rooms, and transactions

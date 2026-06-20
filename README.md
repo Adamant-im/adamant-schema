@@ -1,12 +1,14 @@
 # Schema ![build status](https://img.shields.io/github/actions/workflow/status/Adamant-im/adamant-schema/github-pages.yaml?branch=master)
 
-> OpenAPI 3.0 specification for the ADAMANT Node API, with interactive Swagger UI.
+> OpenAPI 3.2 specification for the ADAMANT Node API, with interactive Swagger UI.
 
 [ADAMANT](https://adamant.im) is a decentralized messenger built on its own blockchain. This specification defines the RESTful interface for interacting with an ADAMANT Node — covering accounts, transactions, chats, delegates, blocks, and more.
 
 **Live schema:** [schema.adamant.im](https://schema.adamant.im)
 
 ## Getting started
+
+Node.js 22.22.1 or newer is required.
 
 Install dependencies:
 
@@ -44,4 +46,4 @@ npm run openapi:generate  # output: examples/axios/client/
 - [ADAMANT Node](https://github.com/Adamant-im/adamant) — the blockchain node implementation
 - [AIPs](https://github.com/Adamant-im/AIPs) — ADAMANT Improvement Proposals
 - [ADAMANT Node API Docs](https://docs.adamant.im) — API reference
-- [OpenAPI Specification](https://swagger.io/specification/) — OpenAPI 3.0 standard
+- [OpenAPI Specification](https://swagger.io/specification/) — OpenAPI 3.2 standard

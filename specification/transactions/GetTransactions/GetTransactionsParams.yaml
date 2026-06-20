@@ -125,7 +125,7 @@
 ###############################
 
 # limit
-- $ref: './params/limit.yaml'
+- $ref: '../../common/params/limit.yaml'
 
 # returnAsset
 - $ref: './params/returnAsset.yaml'

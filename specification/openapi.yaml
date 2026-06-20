@@ -1,13 +1,21 @@
 openapi: 3.0.3
 
 info:
-  title: ADAMANT OpenAPI Specification
-  description: Schema JSON is located [here](/schema.json).
+  title: ADAMANT Node API
+  description: |
+    OpenAPI 3.0 specification for the [ADAMANT](https://adamant.im) Node API.
+
+    ADAMANT is a decentralized messenger built on its own blockchain. This specification covers
+    accounts, transactions, chats, delegates, blocks, nodes, and key-value storage endpoints.
+
+    **Useful links**
+    - [ADAMANT Node](https://github.com/Adamant-im/adamant) — blockchain node implementation
+    - [AIPs](https://github.com/Adamant-im/AIPs) — ADAMANT Improvement Proposals
+    - [API Docs](https://docs.adamant.im) — reference documentation
+    - [JSON Schema](https://github.com/Adamant-im/adamant-schema) — ADAMANT OpenAPI schema (this GitHub repository)
   version: 0.7.0
 
 servers:
-  - url: https://unusual.adamant.im/api
-    description: Mainnet Unusual
   - url: https://lake.adamant.im/api
     description: Mainnet Lake
   - url: https://debate.adamant.im/api

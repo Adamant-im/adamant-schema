@@ -3,7 +3,7 @@
   "version": "0.7.0",
   "description": "ADAMANT OpenAPI Specification",
   "scripts": {
-    "bundle": "redocly bundle specification/openapi.yaml -o dist/schema.json",
+    "bundle": "redocly bundle specification/openapi.yaml -o dist/schema.json --component-renaming-conflicts-severity=off",
     "start": "npm run bundle && ts-node app.ts",
     "start:watch": "nodemon",
     "prepare": "husky"

@@ -8,6 +8,8 @@
 
 ## Getting started
 
+Node.js 22.22.1 or newer is required.
+
 Install dependencies:
 
 ```shell

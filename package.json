@@ -10,6 +10,9 @@
   },
   "author": "bludnic",
   "license": "ISC",
+  "engines": {
+    "node": ">=22.22.1"
+  },
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^22.15.32",

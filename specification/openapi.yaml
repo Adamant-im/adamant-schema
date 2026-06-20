@@ -29,6 +29,10 @@ servers:
     description: Mainnet Endless
   - url: https://ahead.adamant.im/api
     description: Mainnet Dev
+  - url: https://testnode1.adamant.im/api
+    description: Testnet 1
+  - url: https://testnode3.adm.im/api
+    description: Testnet 3
 
 components:
   schemas:

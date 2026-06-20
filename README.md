@@ -1,59 +1,47 @@
 # Schema ![build status](https://img.shields.io/github/actions/workflow/status/Adamant-im/adamant-schema/github-pages.yaml?branch=master)
 
-> Swagger schema for ADAMANT Node API
+> OpenAPI 3.0 specification for the ADAMANT Messenger Node API, with interactive Swagger UI.
 
-The specification creates a RESTful interface for easily developing and consuming an API by effectively mapping all the resources and operations associated with it.
+[ADAMANT](https://adamant.im) is a decentralized messenger built on its own blockchain. This specification defines the RESTful interface for interacting with an ADAMANT Node — covering accounts, transactions, chats, delegates, blocks, and more.
 
-_https://schema.adamant.im_
+**Live schema:** [schema.adamant.im](https://schema.adamant.im)
 
-## Bootstrap
+## Getting started
 
-Install dependencies via `npm`:
-
-```
-$ npm install
-```
-
-then start dev server:
+Install dependencies:
 
 ```shell
-$ npm run start
-# or
-$ npm run start:watch # watches changes in the /specification dir
+npm install
+```
+
+Bundle and start the Swagger UI at http://localhost:3000:
+
+```shell
+npm run start
+# or, to watch for changes in specification/:
+npm run start:watch
 ```
 
 ## Commands
 
-To build the schema into a single file `dist/schema.json`, run:
+| Command | Description |
+|---|---|
+| `npm run bundle` | Bundle `specification/` into `dist/schema.json` |
+| `npm run start` | Bundle and start Swagger UI at http://localhost:3000 |
+| `npm run start:watch` | Watch `specification/` for changes and auto-rebuild |
+
+## Example: generate TypeScript types
 
 ```shell
-$ npm run bundle
-```
-
-Once the schema is built you can run the server:
-
-```shell
-$ npm run start
-```
-
-You should now have the Swagger UI running at _http://localhost:3000_.
-
-JSON Schema is available under _http://localhost:3000/schema.json_
-
-## Example
-
-You can use this schema to generate API types for TypeScript:
-
-```shell
-$ cd examples/axios
-
-$ npm install
-
-# TS types will be generated in `examples/axios/client` dir
-$ npm run openapi:generate
+cd examples/axios
+npm install
+npm run openapi:generate  # output: examples/axios/client/
 ```
 
 ## Links
 
-- [OpenAPI](https://swagger.io/specification/)
-- [ADAMANT Node API Spec Wiki](https://github.com/Adamant-im/adamant/wiki/API-Specification)
+- [ADAMANT Messenger](https://adamant.im) — project website
+- [ADAMANT Node](https://github.com/Adamant-im/adamant) — the blockchain node implementation
+- [AIPs](https://github.com/Adamant-im/AIPs) — ADAMANT Improvement Proposals
+- [ADAMANT Node API Docs](https://docs.adamant.im) — API reference
+- [OpenAPI Specification](https://swagger.io/specification/) — OpenAPI 3.0 standard

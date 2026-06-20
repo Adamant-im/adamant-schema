@@ -5,33 +5,29 @@
   "scripts": {
     "bundle": "redocly bundle specification/openapi.yaml -o dist/schema.json",
     "start": "npm run bundle && ts-node app.ts",
-    "start:watch": "nodemon"
+    "start:watch": "nodemon",
+    "prepare": "husky"
   },
   "author": "bludnic",
   "license": "ISC",
   "devDependencies": {
-    "@types/express": "^4.17.14",
-    "@types/swagger-ui-express": "^4.1.3",
-    "husky": "^8.0.1",
-    "nodemon": "^2.0.20",
-    "openapi-typescript-codegen": "^0.23.0",
-    "prettier": "^2.7.1",
-    "ts-node": "^10.9.1",
-    "typescript": "^4.8.4"
+    "@types/express": "^4.17.25",
+    "@types/swagger-ui-express": "^4.1.8",
+    "husky": "^9.1.7",
+    "nodemon": "^3.1.14",
+    "openapi-typescript-codegen": "^0.30.0",
+    "prettier": "^3.8.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@redocly/cli": "^1.0.0-beta.110",
-    "express": "^4.18.2",
-    "swagger-ui-express": "^4.5.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "@redocly/cli": "^2.34.0",
+    "express": "^4.22.2",
+    "swagger-ui-express": "^4.6.3"
   },
   "lint-staged": {
     "*.{json,yaml,js,ts}": [
-      "prettier --write ."
+      "prettier --write"
     ]
   }
 }

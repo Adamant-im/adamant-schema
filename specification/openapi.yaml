@@ -1,13 +1,22 @@
 openapi: 3.0.3
 
 info:
-  title: ADAMANT OpenAPI Specification
-  description: Schema JSON is located [here](/schema.json).
+  title: ADAMANT Node API
+  description: |
+    OpenAPI 3.0 specification for the [ADAMANT](https://adamant.im) Node API.
+
+    ADAMANT is a decentralized messenger built on its own blockchain. This specification covers
+    accounts, transactions, chats, delegates, blocks, nodes, and key-value storage endpoints.
+
+    **Useful links**
+    - [ADAMANT Node](https://github.com/Adamant-im/adamant) — blockchain node implementation
+    - [AIPs](https://github.com/Adamant-im/AIPs) — ADAMANT Improvement Proposals
+    - [API Docs](https://docs.adamant.im) — reference documentation
+    - [OpenAPI JSON](/schema.json) — bundled specification
+    - [GitHub repository](https://github.com/Adamant-im/adamant-schema) — source of this specification
   version: 0.7.0
 
 servers:
-  - url: https://unusual.adamant.im/api
-    description: Mainnet Unusual
   - url: https://lake.adamant.im/api
     description: Mainnet Lake
   - url: https://debate.adamant.im/api
@@ -260,7 +269,7 @@ paths:
         200:
           description: Block information
           content:
-            applicaton/json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/GetBlockInfoResponseDto'
   '/blocks':
@@ -273,7 +282,7 @@ paths:
         $ref: 'blocks/GetBlocks/GetBlocksQueryParams.yaml'
       responses:
         200:
-          description: Lisk of blocks
+          description: List of blocks
           content:
             application/json:
               schema:
@@ -291,7 +300,7 @@ paths:
         200:
           description: Chat rooms
           content:
-            applicaton/json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/GetChatRoomsResponseDto'
   '/chatrooms/{ownAddress}/{partnerAddress}':
@@ -306,7 +315,7 @@ paths:
         200:
           description: Chat messages
           content:
-            applicaton/json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/GetChatMessagesResponseDto'
   '/chats/get':
@@ -329,7 +338,7 @@ paths:
       tags:
         - Chats
       operationId: sendMessage
-      description: Broadcast transactions of `type 8 — Сhat/Message`
+      description: Broadcast transactions of `type 8 — Chat/Message`
       requestBody:
         content:
           application/json:
@@ -811,7 +820,7 @@ paths:
       tags:
         - Transactions
       operationId: getTransactionsCount
-      description: Get `confirmed`, `uncofirmed` and `queued` transactions count
+      description: Get `confirmed`, `unconfirmed` and `queued` transactions count
       responses:
         200:
           description: Successful response
@@ -864,7 +873,7 @@ paths:
     get:
       tags:
         - Transactions
-      operationId: getUncorfirmedTransaction
+      operationId: getUnconfirmedTransaction
       description: Get unconfirmed transaction by ID
       parameters:
         $ref: 'transactions/GetUnconfirmedTransactionById/GetUnconfirmedTransactionByIdParams.yaml'

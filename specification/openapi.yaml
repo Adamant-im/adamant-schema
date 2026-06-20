@@ -12,7 +12,8 @@ info:
     - [ADAMANT Node](https://github.com/Adamant-im/adamant) — blockchain node implementation
     - [AIPs](https://github.com/Adamant-im/AIPs) — ADAMANT Improvement Proposals
     - [API Docs](https://docs.adamant.im) — reference documentation
-    - [JSON Schema](https://github.com/Adamant-im/adamant-schema) — ADAMANT OpenAPI schema (this GitHub repository)
+    - [OpenAPI JSON](/schema.json) — bundled specification
+    - [GitHub repository](https://github.com/Adamant-im/adamant-schema) — source of this specification
   version: 0.7.0
 
 servers:

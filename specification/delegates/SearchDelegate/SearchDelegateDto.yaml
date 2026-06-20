@@ -1,5 +1,5 @@
 allOf:
-  - $ref: "../DelegateDto.yaml"
+  - $ref: '../DelegateDto.yaml'
   - type: object
     required:
       - voters_cnt

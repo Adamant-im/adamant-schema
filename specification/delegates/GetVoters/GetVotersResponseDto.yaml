@@ -6,7 +6,7 @@ properties:
   accounts:
     type: array
     items:
-      $ref: "./VoterDto.yaml"
+      $ref: './VoterDto.yaml'
   success:
     type: boolean
     example: true

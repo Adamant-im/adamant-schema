@@ -1,5 +1,5 @@
 allOf:
-  - $ref: "../NodeVersion.yaml"
+  - $ref: '../NodeVersion.yaml'
   - type: object
     required:
       - success

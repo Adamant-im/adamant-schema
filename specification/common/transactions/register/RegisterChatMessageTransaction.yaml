@@ -1,5 +1,5 @@
 allOf:
-  - $ref: "./RegisterTransactionBase.yaml"
+  - $ref: './RegisterTransactionBase.yaml'
   - type: object
     required:
       - type
@@ -14,4 +14,4 @@ allOf:
       recipientId:
         type: string
       asset:
-        $ref: "../assets/ChatMessageAsset.yaml"
+        $ref: '../assets/ChatMessageAsset.yaml'

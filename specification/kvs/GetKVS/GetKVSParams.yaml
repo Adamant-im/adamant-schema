@@ -32,6 +32,9 @@
 # orderBy
 - $ref: '../../common/params/orderBy.yaml'
 
+# returnUnconfirmed
+- $ref: '../../common/params/returnUnconfirmed.yaml'
+
 ###############################
 ## Endpoint specific filters ##
 ###############################
@@ -44,4 +47,4 @@
 ### Endpoint specific params ##
 ###############################
 
-- $ref: './params/limit.yaml'
+- $ref: '../../common/params/limit.yaml'

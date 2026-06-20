@@ -1,5 +1,5 @@
 allOf:
-  - $ref: "./BaseTransaction.yaml"
+  - $ref: './BaseTransaction.yaml'
   - type: object
     required:
       - asset
@@ -11,15 +11,13 @@ allOf:
         example: 9
         description: Always equal to `9`
       recipientId:
-        type: string
-        nullable: true
+        type: [string, 'null']
         description: There is no recipient for this type of transaction
       recipientPublicKey:
-        type: string
-        nullable: true
+        type: [string, 'null']
         description: There is no recipient for this type of transaction
       asset:
-        $ref: "./assets/KVSTransactionAsset.yaml"
+        $ref: './assets/KVSTransactionAsset.yaml'
 example:
   id: 11325216963059857859
   height: 3377231
@@ -39,5 +37,5 @@ example:
   asset:
     state:
       key: eth:address
-      value: "0x2391EEaEc07B927D2BA4Fa5cB3cE4b490Fa6fffC"
+      value: '0x2391EEaEc07B927D2BA4Fa5cB3cE4b490Fa6fffC'
       type: 0

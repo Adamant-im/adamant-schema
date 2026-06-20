@@ -1,5 +1,5 @@
 allOf:
-  - $ref: "./RegisterTransactionBase.yaml"
+  - $ref: './RegisterTransactionBase.yaml'
   - type: object
     required:
       - asset
@@ -8,7 +8,7 @@ allOf:
       - senderId
     properties:
       asset:
-        $ref: "../assets/VoteForDelegateAsset.yaml"
+        $ref: '../assets/VoteForDelegateAsset.yaml'
       recipientId:
         type: string
         description: ADAMANT address of account who votes. Same as `senderId`

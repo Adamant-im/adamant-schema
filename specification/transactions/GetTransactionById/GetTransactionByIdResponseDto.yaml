@@ -4,7 +4,7 @@ required:
   - nodeTimestamp
 properties:
   transaction:
-    $ref: "../../common/transactions/AnyTransaction.yaml"
+    $ref: '../../common/transactions/AnyTransaction.yaml'
   success:
     type: boolean
     example: true

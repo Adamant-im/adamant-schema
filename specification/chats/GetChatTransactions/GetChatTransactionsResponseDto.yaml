@@ -7,10 +7,9 @@ properties:
   transactions:
     type: array
     items:
-      $ref: "../../common/transactions/ChatMessageTransaction.yaml"
+      $ref: '../../common/transactions/ChatMessageTransaction.yaml'
   count:
-    type: string
-    description: Number in string format
+    type: integer
   success:
     type: boolean
   nodeTimestamp:

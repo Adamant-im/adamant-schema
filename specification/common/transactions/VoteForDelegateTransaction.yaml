@@ -1,5 +1,5 @@
 allOf:
-  - $ref: "./BaseTransaction.yaml"
+  - $ref: './BaseTransaction.yaml'
   - type: object
     required:
       - votes
@@ -29,7 +29,7 @@ allOf:
         example: 3
         description: Always equal to `3`
       asset:
-        $ref: "./assets/VoteForDelegateAsset.yaml"
+        $ref: './assets/VoteForDelegateAsset.yaml'
 example:
   id: 9888167852341777698
   height: 10488572
@@ -48,8 +48,8 @@ example:
   confirmations: 745088
   asset:
     votes:
-      - "-c0c580c3fb89409f32181fef58935f286f0c1bbf61bd727084ed915b3a4bc95b"
+      - '-c0c580c3fb89409f32181fef58935f286f0c1bbf61bd727084ed915b3a4bc95b'
   votes:
     added: []
     deleted:
-      - "c0c580c3fb89409f32181fef58935f286f0c1bbf61bd727084ed915b3a4bc95b"
+      - 'c0c580c3fb89409f32181fef58935f286f0c1bbf61bd727084ed915b3a4bc95b'

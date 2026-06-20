@@ -1,6 +1,9 @@
 required:
   - success
   - nodeTimestamp
+  - nodeTimestampMs
+  - unixTimestampMs
+  - loader
   - network
   - version
   - wsClient
@@ -11,9 +14,46 @@ properties:
   nodeTimestamp:
     type: number
     example: 58052984
+    description: Current node time measured in seconds since the ADAMANT epoch.
+  nodeTimestampMs:
+    type: number
+    example: 58052984123
+    description: Current node time measured in milliseconds since the ADAMANT epoch. This is node clock metadata and is not consensus data.
+  unixTimestampMs:
+    type: number
+    example: 1562424584123
+    description: Current node time measured in Unix milliseconds. This is node clock metadata and is not consensus data.
+  loader:
+    required:
+      - loaded
+      - now
+      - syncing
+      - consensus
+      - blocks
+      - blocksCount
+    properties:
+      loaded:
+        type: boolean
+      now:
+        type: number
+      syncing:
+        type: boolean
+      consensus:
+        type: number
+      blocks:
+        type: number
+      blocksCount:
+        type: number
+    example:
+      loaded: true
+      now: 4819
+      syncing: true
+      consensus: 0
+      blocks: 15145334
+      blocksCount: 0
   network:
-    $ref: "../NetworkStatus.yaml"
+    $ref: '../NetworkStatus.yaml'
   version:
-    $ref: "../NodeVersion.yaml"
+    $ref: '../NodeVersion.yaml'
   wsClient:
-    $ref: "../WsClient.yaml"
+    $ref: '../WsClient.yaml'

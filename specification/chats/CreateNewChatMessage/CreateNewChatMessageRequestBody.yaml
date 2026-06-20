@@ -2,4 +2,4 @@ required:
   - transaction
 properties:
   transaction:
-    $ref: "../../common/transactions/register/RegisterChatMessageTransaction.yaml"
+    $ref: '../../common/transactions/register/RegisterChatMessageTransaction.yaml'

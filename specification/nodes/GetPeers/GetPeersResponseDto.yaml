@@ -6,7 +6,7 @@ properties:
   peers:
     type: array
     items:
-      $ref: "./PeerDto.yaml"
+      $ref: '../PeerDto.yaml'
   success:
     type: boolean
   nodeTimestamp:

@@ -1,5 +1,6 @@
 required:
   - chats
+  - count
   - success
   - nodeTimestamp
 properties:
@@ -10,12 +11,15 @@ properties:
       properties:
         lastTransaction:
           oneOf:
-            - $ref: "../../common/transactions/TokenTransferTransaction.yaml"
-            - $ref: "../../common/transactions/ChatMessageTransaction.yaml"
+            - $ref: '../../common/transactions/TokenTransferTransaction.yaml'
+            - $ref: '../../common/transactions/ChatMessageTransaction.yaml'
         participants:
           type: array
           items:
-            $ref: "../ChatParticipant.yaml"
+            $ref: '../ChatParticipant.yaml'
+  count:
+    type: integer
+    description: Total number of chatrooms available for the address (independent of `limit`/`offset`).
   success:
     type: boolean
   nodeTimestamp:

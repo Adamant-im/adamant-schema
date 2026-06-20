@@ -7,11 +7,10 @@ properties:
   transactions:
     type: array
     items:
-      $ref: "../../common/transactions/UnconfirmedTransaction.yaml"
+      $ref: '../../common/transactions/UnconfirmedTransaction.yaml'
   count:
-    type: string
-    example: "1"
-    description: Integer in string format
+    type: integer
+    example: 1
   success:
     type: boolean
     example: true

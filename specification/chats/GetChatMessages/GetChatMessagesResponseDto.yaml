@@ -9,12 +9,15 @@ properties:
     type: array
     items:
       oneOf:
-        - $ref: "../../common/transactions/TokenTransferTransaction.yaml"
-        - $ref: "../../common/transactions/ChatMessageTransaction.yaml"
+        - $ref: '../../common/transactions/TokenTransferTransaction.yaml'
+        - $ref: '../../common/transactions/ChatMessageTransaction.yaml'
   participants:
     type: array
     items:
-      $ref: "../ChatParticipant.yaml"
+      $ref: '../ChatParticipant.yaml'
+  count:
+    type: integer
+    description: Total number of messages in the chatroom (independent of `limit`/`offset`).
   success:
     type: boolean
   nodeTimestamp:

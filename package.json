@@ -20,7 +20,7 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
     "lint-staged": "^15.2.0"
-  }
+  },
   "dependencies": {
     "@redocly/cli": "^2.34.0",
     "express": "^4.22.2",

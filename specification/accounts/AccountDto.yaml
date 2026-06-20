@@ -24,8 +24,7 @@ properties:
   secondSignature:
     type: number
   secondPublicKey:
-    type: string
-    nullable: true
+    type: [string, 'null']
   multisignatures:
     type: array
     items:

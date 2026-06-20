@@ -34,8 +34,7 @@ properties:
     type: number
     description: Transaction time specified by the sender, measured in seconds since the ADAMANT epoch.
   timestampMs:
-    type: number
-    nullable: true
+    type: [number, 'null']
     description: Optional transaction time specified by the sender, measured in milliseconds since the ADAMANT epoch. Returned when a node has stored it; for blockchain consensus-sensitive data this works after the `spaceship` activation. When present, it belongs to the same second as `timestamp`, so clients should prefer it for timestamp ordering and fall back to `timestamp * 1000` when it is absent.
   senderPublicKey:
     type: string

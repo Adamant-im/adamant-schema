@@ -34,8 +34,7 @@ properties:
     type: integer
     description: Current node's blockchain height
   clock:
-    type: string
-    nullable: true
+    type: [string, 'null']
   updated:
     type: integer
     description: Unix timestamp based in ms, when peer updated

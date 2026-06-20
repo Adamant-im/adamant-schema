@@ -36,8 +36,7 @@ properties:
     type: integer
     example: 63394407
   timestampMs:
-    type: integer
-    nullable: true
+    type: [integer, 'null']
     example: 63394407123
     description: Optional transaction time measured in milliseconds since the ADAMANT epoch. Available for transactions that include it; for consensus-sensitive blockchain storage it works after the `spaceship` activation. When present, it belongs to the same second as `timestamp`.
   signature:
@@ -57,14 +56,10 @@ properties:
     description: Date and time in ISO 8601 format
     example: 2019-09-06T10:33:28.054Z
   blockId:
-    type: string
-    enum:
-      - null
+    type: 'null'
     const: null
   height:
-    type: number
-    enum:
-      - null
+    type: 'null'
     const: null
   confirmations:
     type: number

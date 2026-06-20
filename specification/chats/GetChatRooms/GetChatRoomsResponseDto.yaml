@@ -1,5 +1,6 @@
 required:
   - chats
+  - count
   - success
   - nodeTimestamp
 properties:
@@ -16,6 +17,9 @@ properties:
           type: array
           items:
             $ref: '../ChatParticipant.yaml'
+  count:
+    type: integer
+    description: Total number of chatrooms available for the address (independent of `limit`/`offset`).
   success:
     type: boolean
   nodeTimestamp:

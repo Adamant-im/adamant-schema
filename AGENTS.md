@@ -80,6 +80,8 @@ Formatting is handled by Prettier. It runs automatically on pre-commit (husky + 
 
 Pushing to `master` triggers the GitHub Actions workflow (`.github/workflows/github-pages.yaml`) which bundles and deploys to GitHub Pages → <https://schema.adamant.im>.
 
+**GitHub Pages does NOT run `app.ts`.** The workflow only runs `npm run bundle` and uploads the `dist/` directory. The deployed Swagger UI is the static `dist/index.html` (tracked in git), which loads `swagger-ui-dist` from a CDN and configures `SwaggerUIBundle` inline. `app.ts` is only the local `npm run start` server. So any Swagger UI change made in `app.ts` (options, plugins, custom JS) must be mirrored in `dist/index.html`, or it will work locally but not on the deployed site. Also keep `dist/index.html`'s pinned `swagger-ui-dist` version compatible with the spec's OpenAPI version (e.g. OpenAPI 3.2 needs swagger-ui-dist ≥ 5.17).
+
 Work in `dev` and open PRs targeting `dev`. Merges to `master` are release actions.
 
 ## Issue, Label, and PR Conventions

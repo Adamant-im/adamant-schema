@@ -1,9 +1,9 @@
-openapi: 3.1.1
+openapi: 3.2.0
 
 info:
   title: ADAMANT Node API
   description: |
-    OpenAPI 3.1 specification for the [ADAMANT](https://adamant.im) Node API.
+    OpenAPI 3.2 specification for the [ADAMANT](https://adamant.im) Node API.
 
     ADAMANT is a decentralized messenger built on its own blockchain. This specification covers
     accounts, transactions, chats, delegates, blocks, nodes, and key-value storage endpoints.

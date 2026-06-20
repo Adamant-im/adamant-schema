@@ -4,7 +4,7 @@ import swaggerUI from 'swagger-ui-express';
 const app = express();
 const swaggerDocument = require('./dist/schema.json');
 
-app.use(express.static('dist'));
+app.use(express.static('dist', { index: false }));
 app.use(
   '/',
   swaggerUI.serve,

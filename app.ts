@@ -74,7 +74,7 @@ const swaggerUiOptions = {
     });
 
     (function () {
-      var TIMEOUT_MS = 10000;
+      var TIMEOUT_MS = 5000;
       var PACKAGE_VERSION = '${packageVersion}';
 
       function originalLabel(option) {

@@ -1,14 +1,42 @@
 {
   "name": "adamant-schema",
-  "version": "0.7.0",
-  "description": "ADAMANT OpenAPI Specification",
+  "version": "0.10.0",
+  "description": "OpenAPI specification for the ADAMANT Node API (accounts, transactions, chats, delegates, blocks, nodes, and KVS). Tracks the ADAMANT Blockchain Node REST API.",
+  "keywords": [
+    "adm",
+    "adamant",
+    "openapi",
+    "swagger",
+    "schema",
+    "specification",
+    "api",
+    "rest",
+    "blockchain",
+    "messenger",
+    "messaging",
+    "decentralization",
+    "crypto",
+    "cryptocurrency",
+    "dpos"
+  ],
+  "homepage": "https://github.com/Adamant-im/adamant-schema#readme",
+  "bugs": {
+    "url": "https://github.com/Adamant-im/adamant-schema/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adamant-im/adamant-schema.git"
+  },
   "scripts": {
     "bundle": "redocly bundle specification/openapi.yaml -o dist/schema.json --component-renaming-conflicts-severity=off",
     "start": "npm run bundle && ts-node app.ts",
     "start:watch": "nodemon",
     "prepare": "husky"
   },
-  "author": "bludnic",
+  "author": "ADAMANT Foundation <devs@adamant.im> (https://adamant.im)",
+  "contributors": [
+    "bludnic"
+  ],
   "license": "ISC",
   "engines": {
     "node": ">=22.22.1"

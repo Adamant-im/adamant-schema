@@ -27,6 +27,11 @@
 - $ref: '../../common/params/filters/inId/andInId.yaml'
 - $ref: '../../common/params/filters/inId/orInId.yaml'
 
+# isIn (alias for inId, since v0.8.0)
+- $ref: '../../common/params/filters/isIn/isIn.yaml'
+- $ref: '../../common/params/filters/isIn/andIsIn.yaml'
+- $ref: '../../common/params/filters/isIn/orIsIn.yaml'
+
 # type
 - $ref: '../../common/params/filters/messageType/type.yaml'
 - $ref: '../../common/params/filters/messageType/andType.yaml'

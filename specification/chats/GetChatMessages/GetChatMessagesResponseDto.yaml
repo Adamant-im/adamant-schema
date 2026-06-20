@@ -15,6 +15,9 @@ properties:
     type: array
     items:
       $ref: '../ChatParticipant.yaml'
+  count:
+    type: integer
+    description: Total number of messages in the chatroom (independent of `limit`/`offset`).
   success:
     type: boolean
   nodeTimestamp:

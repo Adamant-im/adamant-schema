@@ -14,7 +14,7 @@ info:
     - [API Docs](https://docs.adamant.im) — reference documentation
     - [OpenAPI JSON](/schema.json) — bundled specification
     - [GitHub repository](https://github.com/Adamant-im/adamant-schema) — source of this specification
-  version: 0.7.0
+  version: 0.10.0
 
 servers:
   - url: https://lake.adamant.im/api

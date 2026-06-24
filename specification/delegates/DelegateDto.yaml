@@ -26,7 +26,7 @@ properties:
   votesWeight:
     type: string
     description: Vote weight (Fair Delegate System)
-  producedlocks:
+  producedblocks:
     type: integer
     description: Count of produced blocks
   missedblocks:

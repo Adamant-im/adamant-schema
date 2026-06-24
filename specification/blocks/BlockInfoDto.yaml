@@ -10,6 +10,7 @@ required:
   - reward
   - payloadLength
   - payloadHash
+  - generatorPublicKey
   - generatorId
   - blockSignature
   - confirmations
@@ -38,6 +39,8 @@ properties:
   payloadLength:
     type: number
   payloadHash:
+    type: string
+  generatorPublicKey:
     type: string
   generatorId:
     type: string

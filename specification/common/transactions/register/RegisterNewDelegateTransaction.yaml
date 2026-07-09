@@ -4,7 +4,6 @@ allOf:
     required:
       - asset
       - type
-      - senderId
     properties:
       type:
         type: integer

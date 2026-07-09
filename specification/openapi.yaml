@@ -43,6 +43,8 @@ components:
       $ref: 'accounts/GetAccountBalance/GetAccountBalanceResponseDto.yaml'
     GetAccountPublicKeyResponseDto:
       $ref: 'accounts/GetAccountPublicKey/GetAccountPublicKeyResponseDto.yaml'
+    GetTopAccountsResponseDto:
+      $ref: 'accounts/GetTopAccounts/GetTopAccountsResponseDto.yaml'
     CreateNewAccountRequestBody:
       $ref: 'accounts/CreateNewAccount/CreateNewAccountRequestBody.yaml'
     CreateNewAccountResponseDto:
@@ -242,6 +244,21 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetAccountPublicKeyResponseDto'
+  '/accounts/top':
+    get:
+      tags:
+        - Account
+      operationId: getTopAccounts
+      description: Get accounts sorted by confirmed balance with pagination metadata.
+      parameters:
+        $ref: 'accounts/GetTopAccounts/GetTopAccountsParams.yaml'
+      responses:
+        200:
+          description: Top accounts page
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetTopAccountsResponseDto'
   '/accounts/new':
     post:
       tags:

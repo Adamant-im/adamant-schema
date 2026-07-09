@@ -249,7 +249,7 @@ paths:
       tags:
         - Account
       operationId: getTopAccounts
-      description: Get accounts sorted by confirmed balance with pagination metadata.
+      description: Get non-zero-balance accounts sorted by confirmed balance with pagination metadata.
       parameters:
         $ref: 'accounts/GetTopAccounts/GetTopAccountsParams.yaml'
       responses:

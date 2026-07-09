@@ -10,10 +10,10 @@ properties:
     type: array
     items:
       $ref: './GetTopAccountDto.yaml'
-    description: Accounts sorted by confirmed balance descending and address ascending for equal balances.
+    description: Non-zero-balance accounts sorted by confirmed balance descending and address ascending for equal balances.
   count:
     type: integer
-    description: Total number of accounts matching the filter before pagination.
+    description: Total number of non-zero-balance accounts matching the filter before pagination.
     example: 254
   limit:
     type: integer

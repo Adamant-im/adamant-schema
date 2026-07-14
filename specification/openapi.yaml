@@ -89,7 +89,7 @@ components:
     ClientWebSocketBlockSubscription:
       $ref: 'websocket/BlockSubscription.yaml'
     ClientWebSocketNewTransaction:
-      $ref: 'common/transactions/AnyTransaction.yaml'
+      $ref: 'common/transactions/UnconfirmedTransaction.yaml'
     ClientWebSocketBalanceChange:
       $ref: 'websocket/BalanceChangeEvent.yaml'
     ClientWebSocketNewBlock:

@@ -34,8 +34,67 @@ servers:
   - url: https://testnode3.adm.im/api
     description: Testnet 3
 
+x-client-websocket:
+  protocol: Socket.IO
+  description: >-
+    Opt-in live events exposed by the node's client WebSocket server. Discover availability and
+    the client port through GET /node/status. Subscriptions are scoped to one socket and must be
+    restored after reconnecting.
+  clientEvents:
+    address:
+      description: Adds addresses used by transaction filters and balance subscriptions.
+      payload:
+        $ref: '#/components/schemas/ClientWebSocketAddressSubscription'
+    types:
+      description: Adds transaction types used by newTrans filtering.
+      payload:
+        $ref: '#/components/schemas/ClientWebSocketTransactionTypeSubscription'
+    assetChatTypes:
+      description: Adds asset.chat.type values used by chat transaction filtering.
+      payload:
+        $ref: '#/components/schemas/ClientWebSocketChatTypeSubscription'
+    balances:
+      description: Adds public account fields emitted by balances/change.
+      payload:
+        $ref: '#/components/schemas/ClientWebSocketBalanceSubscription'
+    blocks:
+      description: Enables or disables newBlock events for the socket.
+      payload:
+        $ref: '#/components/schemas/ClientWebSocketBlockSubscription'
+  serverEvents:
+    newTrans:
+      description: A transaction applied to the node's unconfirmed pool.
+      payload:
+        $ref: '#/components/schemas/ClientWebSocketNewTransaction'
+    balances/change:
+      description: Current requested balance fields after an account balance mutation.
+      payload:
+        $ref: '#/components/schemas/ClientWebSocketBalanceChange'
+    newBlock:
+      description: Compact header of a successfully applied and saved block.
+      payload:
+        $ref: '#/components/schemas/ClientWebSocketNewBlock'
+
 components:
   schemas:
+    # Client WebSocket
+    ClientWebSocketAddressSubscription:
+      $ref: 'websocket/AddressSubscription.yaml'
+    ClientWebSocketTransactionTypeSubscription:
+      $ref: 'websocket/TransactionTypeSubscription.yaml'
+    ClientWebSocketChatTypeSubscription:
+      $ref: 'websocket/ChatTypeSubscription.yaml'
+    ClientWebSocketBalanceSubscription:
+      $ref: 'websocket/BalanceSubscription.yaml'
+    ClientWebSocketBlockSubscription:
+      $ref: 'websocket/BlockSubscription.yaml'
+    ClientWebSocketNewTransaction:
+      $ref: 'common/transactions/UnconfirmedTransaction.yaml'
+    ClientWebSocketBalanceChange:
+      $ref: 'websocket/BalanceChangeEvent.yaml'
+    ClientWebSocketNewBlock:
+      $ref: 'websocket/NewBlockEvent.yaml'
+
     # Account
     GetAccountInfoResponseDto:
       $ref: 'accounts/GetAccountInfo/GetAccountInfoResponseDto.yaml'

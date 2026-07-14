@@ -1,5 +1,6 @@
 description: >-
-  One ADAMANT address or a list of addresses. Values are validated and normalized to uppercase.
+  One ADAMANT address or a list of addresses. The node validates values at runtime and stores
+  accepted addresses in uppercase; this schema does not perform that validation or normalization.
 oneOf:
   - $ref: '../common/properties/AdamantAddress.yaml'
   - type: array

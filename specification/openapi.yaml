@@ -914,6 +914,8 @@ paths:
         - Transactions
       operationId: getQueuedTransactions
       description: Get queued transactions
+      parameters:
+        $ref: 'transactions/GetPooledTransactions/GetPooledTransactionsParams.yaml'
       responses:
         200:
           description: Successful response
@@ -942,6 +944,8 @@ paths:
         - Transactions
       operationId: getUnconfirmedTransactions
       description: Get unconfirmed transactions
+      parameters:
+        $ref: 'transactions/GetPooledTransactions/GetPooledTransactionsParams.yaml'
       responses:
         200:
           description: Successful response

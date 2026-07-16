@@ -14,4 +14,14 @@
   schema:
     type: integer
     format: int32
+    minimum: 0
     default: 0
+- name: orderBy
+  in: query
+  description: >-
+    Sort by `approval`, `productivity`, `rate`, `rank`, `vote`, `username`, `address`, or `publicKey`.
+    Append `:asc` or `:desc` to select the direction, for example `rank:asc`.
+  required: false
+  schema:
+    type: string
+    example: rank:asc

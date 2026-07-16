@@ -527,7 +527,12 @@ paths:
       tags:
         - Delegates and Voting
       operationId: getNextForgers
-      description: Returns list of next forgers
+      description: >-
+        Returns a snapshot of public keys ordered by upcoming slots using the delegate schedule for the next block
+        height (`currentBlock + 1`). All entries use this next-block schedule; request a new snapshot after the node
+        accepts another block.
+      parameters:
+        $ref: 'delegates/GetNextForgers/GetNextForgersParams.yaml'
       responses:
         200:
           description: Successful response
@@ -914,6 +919,8 @@ paths:
         - Transactions
       operationId: getQueuedTransactions
       description: Get queued transactions
+      parameters:
+        $ref: 'transactions/GetPooledTransactions/GetPooledTransactionsParams.yaml'
       responses:
         200:
           description: Successful response
@@ -942,6 +949,8 @@ paths:
         - Transactions
       operationId: getUnconfirmedTransactions
       description: Get unconfirmed transactions
+      parameters:
+        $ref: 'transactions/GetPooledTransactions/GetPooledTransactionsParams.yaml'
       responses:
         200:
           description: Successful response

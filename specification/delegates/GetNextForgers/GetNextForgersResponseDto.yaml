@@ -8,7 +8,9 @@ required:
 properties:
   delegates:
     type: array
-    description: Array of next forgers public keys
+    description: >-
+      Public keys ordered by upcoming slots using the delegate schedule for `currentBlock + 1`. All entries use this
+      next-block schedule; request a new snapshot after the node accepts another block.
     items:
       type: string
     example:

@@ -15,6 +15,7 @@
   schema:
     type: integer
     format: int32
+    minimum: 0
     default: 0
 - name: os
   in: query
@@ -30,3 +31,53 @@
   schema:
     type: string
     example: 194.32.79.175
+- name: port
+  in: query
+  description: Filter results by node port.
+  required: false
+  schema:
+    type: integer
+    format: int32
+    minimum: 1
+    maximum: 65535
+- name: state
+  in: query
+  description: Filter by peer state (`0` banned, `1` disconnected, or `2` connected).
+  required: false
+  schema:
+    type: integer
+    format: int32
+    minimum: 0
+    maximum: 2
+- name: version
+  in: query
+  description: Filter results by semantic ADAMANT node version.
+  required: false
+  schema:
+    type: string
+    minLength: 5
+    maxLength: 12
+    example: 0.10.2
+- name: broadhash
+  in: query
+  description: Filter results by hexadecimal broadhash.
+  required: false
+  schema:
+    type: string
+    format: hex
+- name: height
+  in: query
+  description: Filter results by blockchain height.
+  required: false
+  schema:
+    type: integer
+    minimum: 1
+- name: orderBy
+  in: query
+  description: >-
+    Sort by `ip`, `port`, `state`, `os`, `version`, `broadhash`, `height`, or `nonce`.
+    Append `:asc` or `:desc` to select the direction.
+  required: false
+  schema:
+    type: string
+    example: height:desc

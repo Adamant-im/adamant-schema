@@ -2,6 +2,7 @@ required:
   - broadhash
   - epoch
   - height
+  - consensusCodeName
   - fee
   - milestone
   - nethash
@@ -16,6 +17,11 @@ properties:
     description: Time when blockchain epoch starts. Value `2017-09-02T17:00:00.000Z` is for mainnet.
   height:
     type: integer
+  consensusCodeName:
+    type: [string, 'null']
+    description: >-
+      Latest cumulative consensus upgrade active at `height`, or `null` before the first configured activation.
+      An upgrade configured for height H is active starting at block H.
   fee:
     type: integer
   milestone:
@@ -34,6 +40,7 @@ example:
   broadhash: 4a28272c915f74d118120bb47db547a18a7512e1d48092c48be86939a6d45b89
   epoch: 2017-09-02T17:00:00.000Z
   height: 10145334
+  consensusCodeName: fairSystem
   fee: 50000000
   milestone: 1
   nethash: bd330166898377fb28743ceef5e43a5d9d0a3efd9b3451fb7bc53530bb0a6d64

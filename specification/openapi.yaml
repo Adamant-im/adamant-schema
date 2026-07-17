@@ -14,7 +14,7 @@ info:
     - [API Docs](https://docs.adamant.im) — reference documentation
     - [OpenAPI JSON](/schema.json) — bundled specification
     - [GitHub repository](https://github.com/Adamant-im/adamant-schema) — source of this specification
-  version: 0.10.0
+  version: 0.10.2
 
 servers:
   - url: https://lake.adamant.im/api
@@ -34,8 +34,67 @@ servers:
   - url: https://testnode3.adm.im/api
     description: Testnet 3
 
+x-client-websocket:
+  protocol: Socket.IO
+  description: >-
+    Opt-in live events exposed by the node's client WebSocket server. Discover availability and
+    the client port through GET /node/status. Subscriptions are scoped to one socket and must be
+    restored after reconnecting.
+  clientEvents:
+    address:
+      description: Adds addresses used by transaction filters and balance subscriptions.
+      payload:
+        $ref: '#/components/schemas/ClientWebSocketAddressSubscription'
+    types:
+      description: Adds transaction types used by newTrans filtering.
+      payload:
+        $ref: '#/components/schemas/ClientWebSocketTransactionTypeSubscription'
+    assetChatTypes:
+      description: Adds asset.chat.type values used by chat transaction filtering.
+      payload:
+        $ref: '#/components/schemas/ClientWebSocketChatTypeSubscription'
+    balances:
+      description: Adds public account fields emitted by balances/change.
+      payload:
+        $ref: '#/components/schemas/ClientWebSocketBalanceSubscription'
+    blocks:
+      description: Enables or disables newBlock events for the socket.
+      payload:
+        $ref: '#/components/schemas/ClientWebSocketBlockSubscription'
+  serverEvents:
+    newTrans:
+      description: A transaction applied to the node's unconfirmed pool.
+      payload:
+        $ref: '#/components/schemas/ClientWebSocketNewTransaction'
+    balances/change:
+      description: Current requested balance fields after an account balance mutation.
+      payload:
+        $ref: '#/components/schemas/ClientWebSocketBalanceChange'
+    newBlock:
+      description: Compact header of a successfully applied and saved block.
+      payload:
+        $ref: '#/components/schemas/ClientWebSocketNewBlock'
+
 components:
   schemas:
+    # Client WebSocket
+    ClientWebSocketAddressSubscription:
+      $ref: 'websocket/AddressSubscription.yaml'
+    ClientWebSocketTransactionTypeSubscription:
+      $ref: 'websocket/TransactionTypeSubscription.yaml'
+    ClientWebSocketChatTypeSubscription:
+      $ref: 'websocket/ChatTypeSubscription.yaml'
+    ClientWebSocketBalanceSubscription:
+      $ref: 'websocket/BalanceSubscription.yaml'
+    ClientWebSocketBlockSubscription:
+      $ref: 'websocket/BlockSubscription.yaml'
+    ClientWebSocketNewTransaction:
+      $ref: 'common/transactions/UnconfirmedTransaction.yaml'
+    ClientWebSocketBalanceChange:
+      $ref: 'websocket/BalanceChangeEvent.yaml'
+    ClientWebSocketNewBlock:
+      $ref: 'websocket/NewBlockEvent.yaml'
+
     # Account
     GetAccountInfoResponseDto:
       $ref: 'accounts/GetAccountInfo/GetAccountInfoResponseDto.yaml'
@@ -43,6 +102,8 @@ components:
       $ref: 'accounts/GetAccountBalance/GetAccountBalanceResponseDto.yaml'
     GetAccountPublicKeyResponseDto:
       $ref: 'accounts/GetAccountPublicKey/GetAccountPublicKeyResponseDto.yaml'
+    GetTopAccountsResponseDto:
+      $ref: 'accounts/GetTopAccounts/GetTopAccountsResponseDto.yaml'
     CreateNewAccountRequestBody:
       $ref: 'accounts/CreateNewAccount/CreateNewAccountRequestBody.yaml'
     CreateNewAccountResponseDto:
@@ -242,6 +303,21 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetAccountPublicKeyResponseDto'
+  '/accounts/top':
+    get:
+      tags:
+        - Account
+      operationId: getTopAccounts
+      description: Get non-zero-balance accounts sorted by confirmed balance with pagination metadata.
+      parameters:
+        $ref: 'accounts/GetTopAccounts/GetTopAccountsParams.yaml'
+      responses:
+        200:
+          description: Top accounts page
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetTopAccountsResponseDto'
   '/accounts/new':
     post:
       tags:
@@ -451,7 +527,12 @@ paths:
       tags:
         - Delegates and Voting
       operationId: getNextForgers
-      description: Returns list of next forgers
+      description: >-
+        Returns a snapshot of public keys ordered by upcoming slots using the delegate schedule for the next block
+        height (`currentBlock + 1`). All entries use this next-block schedule; request a new snapshot after the node
+        accepts another block.
+      parameters:
+        $ref: 'delegates/GetNextForgers/GetNextForgersParams.yaml'
       responses:
         200:
           description: Successful response
@@ -838,6 +919,8 @@ paths:
         - Transactions
       operationId: getQueuedTransactions
       description: Get queued transactions
+      parameters:
+        $ref: 'transactions/GetPooledTransactions/GetPooledTransactionsParams.yaml'
       responses:
         200:
           description: Successful response
@@ -866,6 +949,8 @@ paths:
         - Transactions
       operationId: getUnconfirmedTransactions
       description: Get unconfirmed transactions
+      parameters:
+        $ref: 'transactions/GetPooledTransactions/GetPooledTransactionsParams.yaml'
       responses:
         200:
           description: Successful response

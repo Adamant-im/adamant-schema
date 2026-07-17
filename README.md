@@ -2,9 +2,13 @@
 
 > OpenAPI 3.2 specification for the ADAMANT Node API, with interactive Swagger UI.
 
-[ADAMANT](https://adamant.im) is a decentralized messenger built on its own blockchain. This specification defines the RESTful interface for interacting with an ADAMANT Node — covering accounts, transactions, chats, delegates, blocks, and more.
+[ADAMANT](https://adamant.im) is a decentralized messenger built on its own blockchain. This specification defines the RESTful interface for interacting with an ADAMANT Node — covering accounts, transactions, chats, delegates, blocks, and more. Reusable client WebSocket subscription and event payload contracts are included under the top-level `x-client-websocket` extension.
 
 **Live schema:** [schema.adamant.im](https://schema.adamant.im)
+
+> Brought to you by the ADAMANT developer community and **cryptofoundry**.
+> Custom crypto software, trading bots, payment systems and blockchain infrastructure — built for production. [Tell us what to build](https://adamant.business#contact).
+>
 
 ## Getting started
 
@@ -26,11 +30,11 @@ npm run start:watch
 
 ## Commands
 
-| Command | Description |
-|---|---|
-| `npm run bundle` | Bundle `specification/` into `dist/schema.json` |
-| `npm run start` | Bundle and start Swagger UI at http://localhost:3000 |
-| `npm run start:watch` | Watch `specification/` for changes and auto-rebuild |
+| Command               | Description                                          |
+| --------------------- | ---------------------------------------------------- |
+| `npm run bundle`      | Bundle `specification/` into `dist/schema.json`      |
+| `npm run start`       | Bundle and start Swagger UI at http://localhost:3000 |
+| `npm run start:watch` | Watch `specification/` for changes and auto-rebuild  |
 
 ## Example: generate TypeScript types
 

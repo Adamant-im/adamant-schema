@@ -8,3 +8,6 @@ dist/schema.json
 
 # ai
 .ai-ignored/
+.ai-tasks/
+.claude/
+.cursor/

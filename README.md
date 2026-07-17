@@ -6,6 +6,10 @@
 
 **Live schema:** [schema.adamant.im](https://schema.adamant.im)
 
+> Brought to you by the ADAMANT developer community and **cryptofoundry**.
+> Custom crypto software, trading bots, payment systems and blockchain infrastructure — built for production. [Tell us what to build](https://adamant.business#contact).
+>
+
 ## Getting started
 
 Node.js 22.22.1 or newer is required.

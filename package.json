@@ -19,7 +19,7 @@
     "cryptocurrency",
     "dpos"
   ],
-  "homepage": "https://github.com/Adamant-im/adamant-schema#readme",
+  "homepage": "https://schema.adamant.im",
   "bugs": {
     "url": "https://github.com/Adamant-im/adamant-schema/issues"
   },
@@ -33,7 +33,7 @@
     "start:watch": "nodemon",
     "prepare": "husky"
   },
-  "author": "ADAMANT Foundation <devs@adamant.im> (https://adamant.im)",
+  "author": "ADAMANT community developers <devs@adamant.im>, ADAMANT Foundation <devs@adamant.im> (https://adamant.im)",
   "contributors": [
     "bludnic"
   ],
@@ -43,18 +43,18 @@
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
-    "@types/node": "^22.15.32",
+    "@types/node": "^22.20.1",
     "@types/swagger-ui-express": "^4.1.8",
     "husky": "^9.1.7",
     "nodemon": "^3.1.14",
-    "openapi-typescript-codegen": "^0.30.0",
-    "prettier": "^3.8.4",
+    "openapi-typescript-codegen": "^0.31.0",
+    "prettier": "^3.9.5",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.3",
-    "lint-staged": "^17.0.7"
+    "lint-staged": "^17.0.8"
   },
   "dependencies": {
-    "@redocly/cli": "^2.34.0",
+    "@redocly/cli": "^2.39.0",
     "express": "^5.2.1",
     "swagger-ui-express": "^5.0.1"
   },

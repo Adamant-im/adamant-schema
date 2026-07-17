@@ -1,6 +1,6 @@
 {
   "name": "adamant-schema",
-  "version": "0.10.0",
+  "version": "0.10.2",
   "description": "OpenAPI specification for the ADAMANT Node API (accounts, transactions, chats, delegates, blocks, nodes, and KVS). Tracks the ADAMANT Blockchain Node REST API.",
   "keywords": [
     "adm",

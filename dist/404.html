@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting to ADAMANT Node API Schema</title>
+    <meta http-equiv="refresh" content="2; url=https://docs.adamant.im/schema/" />
+    <script>
+      (function () {
+        var path = window.location.pathname.replace(/^\/+/, '');
+        var target =
+          'https://docs.adamant.im/schema/' +
+          path +
+          window.location.search +
+          window.location.hash;
+        window.location.replace(target);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>
+      The ADAMANT Node API Schema has moved to
+      <a href="https://docs.adamant.im/schema/">https://docs.adamant.im/schema/</a>.
+    </p>
+  </body>
+</html>

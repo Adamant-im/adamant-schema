@@ -1,53 +1,17 @@
-# Schema ![build status](https://img.shields.io/github/actions/workflow/status/Adamant-im/adamant-schema/github-pages.yaml?branch=master)
-
-> OpenAPI 3.2 specification for the ADAMANT Node API, with interactive Swagger UI.
-
-[ADAMANT](https://adamant.im) is a decentralized messenger built on its own blockchain. This specification defines the RESTful interface for interacting with an ADAMANT Node — covering accounts, transactions, chats, delegates, blocks, and more. Reusable client WebSocket subscription and event payload contracts are included under the top-level `x-client-websocket` extension.
-
-**Live schema:** [schema.adamant.im](https://schema.adamant.im)
-
-> Brought to you by the ADAMANT developer community and **cryptofoundry**.
-> Custom crypto software, trading bots, payment systems and blockchain infrastructure — built for production. [Tell us what to build](https://adamant.business#contact).
+> [!WARNING]
+> **This repository has moved and is archived read-only.**
 >
+> The ADAMANT Node OpenAPI 3.2 specification now lives in [`Adamant-im/adamant/openapi/`](https://github.com/Adamant-im/adamant/tree/dev/openapi) alongside the node codebase and VitePress documentation (`docs/`).
+>
+> - Live Swagger UI: https://docs.adamant.im/schema/
+> - Bundled OpenAPI JSON: https://docs.adamant.im/schema/schema.json
+> - Reference documentation: https://docs.adamant.im/
+> - Open issues and pull requests in: https://github.com/Adamant-im/adamant
+>
+> `https://schema.adamant.im/` redirects to `https://docs.adamant.im/schema/`, and `https://schema.adamant.im/schema.json` serves a frozen `v0.10.2` copy for transitional compatibility. Historical commits and pinned raw URLs remain available here read-only. See https://github.com/Adamant-im/adamant/issues/299.
 
-## Getting started
+---
 
-Node.js 22.22.1 or newer is required.
+# ADAMANT Node API Schema (Archived)
 
-Install dependencies:
-
-```shell
-npm install
-```
-
-Bundle and start the Swagger UI at http://localhost:3000:
-
-```shell
-npm run start
-# or, to watch for changes in specification/:
-npm run start:watch
-```
-
-## Commands
-
-| Command               | Description                                          |
-| --------------------- | ---------------------------------------------------- |
-| `npm run bundle`      | Bundle `specification/` into `dist/schema.json`      |
-| `npm run start`       | Bundle and start Swagger UI at http://localhost:3000 |
-| `npm run start:watch` | Watch `specification/` for changes and auto-rebuild  |
-
-## Example: generate TypeScript types
-
-```shell
-cd examples/axios
-npm install
-npm run openapi:generate  # output: examples/axios/client/
-```
-
-## Links
-
-- [ADAMANT](https://adamant.im) — project website
-- [ADAMANT Node](https://github.com/Adamant-im/adamant) — the blockchain node implementation
-- [AIPs](https://github.com/Adamant-im/AIPs) — ADAMANT Improvement Proposals
-- [ADAMANT Node API Docs](https://docs.adamant.im) — API reference
-- [OpenAPI Specification](https://swagger.io/specification/) — OpenAPI 3.2 standard
+Please submit all OpenAPI specification updates and issues to [Adamant-im/adamant](https://github.com/Adamant-im/adamant) (`openapi/` directory).
